@@ -1,0 +1,23 @@
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-lg);
+}
+
+.value {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+  font-weight: var(--font-black);
+  color: var(--color-accent-cyan);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: var(--font-medium);
+  text-align: center;
+}
