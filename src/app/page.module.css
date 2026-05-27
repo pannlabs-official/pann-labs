@@ -24,7 +24,7 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(10, 14, 23, 0.4) 0%, #0A0E17 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(2, 27, 20, 0.4) 0%, #021B14 100%);
 }
 
 .heroContent {
@@ -42,8 +42,8 @@
   align-items: center;
   gap: var(--space-sm);
   padding: 0.4rem 1.25rem;
-  background: rgba(0, 240, 255, 0.05);
-  border: 1px solid rgba(0, 240, 255, 0.2);
+  background: rgba(130, 232, 209, 0.05);
+  border: 1px solid rgba(130, 232, 209, 0.2);
   border-radius: var(--radius-full);
   color: var(--color-accent-cyan);
   font-family: var(--font-mono);
@@ -120,11 +120,11 @@
   width: 72px;
   height: 72px;
   border-radius: var(--radius-xl);
-  background: rgba(0, 240, 255, 0.05);
-  border: 1px solid rgba(0, 240, 255, 0.1);
+  background: rgba(130, 232, 209, 0.05);
+  border: 1px solid rgba(130, 232, 209, 0.1);
   color: var(--color-accent-cyan);
   margin-bottom: var(--space-lg);
-  box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.05);
+  box-shadow: inset 0 0 20px rgba(130, 232, 209, 0.05);
 }
 
 /* ====== STATS ====== */
@@ -172,10 +172,10 @@
   height: 80px;
   border-radius: var(--radius-2xl);
   background: var(--gradient-main);
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  border: 1px solid rgba(230, 200, 117, 0.2);
   color: var(--color-accent-gold);
   margin-bottom: var(--space-lg);
-  box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.05);
+  box-shadow: inset 0 0 20px rgba(230, 200, 117, 0.05);
 }
 
 .audienceCard h3 {
@@ -204,7 +204,7 @@
 
 /* ====== GAMES PROMO ====== */
 .gamesPromo {
-  background: linear-gradient(135deg, #111827 0%, #0A0E17 100%);
+  background: linear-gradient(135deg, #042C21 0%, #021B14 100%);
   border-radius: var(--radius-2xl);
   border: 1px solid var(--color-border-glow);
   padding: var(--space-4xl) var(--space-2xl);
@@ -221,7 +221,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.05), transparent 60%);
+  background: radial-gradient(circle at 50% 50%, rgba(130, 232, 209, 0.05), transparent 60%);
   z-index: 0;
   pointer-events: none;
   animation: float 10s ease-in-out infinite;

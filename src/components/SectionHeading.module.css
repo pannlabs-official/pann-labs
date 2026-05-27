@@ -19,8 +19,8 @@
   letter-spacing: 2px;
   margin-bottom: var(--space-md);
   padding: 0.3rem 0.8rem;
-  background: rgba(0, 240, 255, 0.05);
-  border: 1px solid rgba(0, 240, 255, 0.15);
+  background: rgba(130, 232, 209, 0.05);
+  border: 1px solid rgba(130, 232, 209, 0.15);
   border-radius: var(--radius-full);
 }
 

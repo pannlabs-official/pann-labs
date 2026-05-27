@@ -85,7 +85,7 @@
 }
 
 .socialLink:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: rgba(130, 232, 209, 0.1);
   border-color: var(--color-accent-cyan);
   color: var(--color-accent-cyan);
   transform: translateY(-2px);
@@ -173,7 +173,7 @@
   background: var(--color-accent-gold);
   color: #000 !important;
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 20px rgba(230, 200, 117, 0.4);
 }
 
 .bottomBar {

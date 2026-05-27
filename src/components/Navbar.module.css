@@ -12,7 +12,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(10, 14, 23, 0.85);
+  background: rgba(2, 27, 20, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -103,7 +103,7 @@
   font-weight: var(--font-bold);
   text-decoration: none;
   transition: all var(--transition-base);
-  box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.05);
+  box-shadow: inset 0 0 10px rgba(230, 200, 117, 0.05);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -112,7 +112,7 @@
   transform: translateY(-2px);
   background: var(--color-accent-gold);
   color: #000 !important;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 20px rgba(230, 200, 117, 0.4);
 }
 
 .menuToggle {
