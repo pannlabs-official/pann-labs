@@ -54,25 +54,21 @@
 
 /* Variants */
 .primary {
-  background: var(--color-bg-tertiary);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-accent-cyan);
-  box-shadow: 0 0 10px rgba(130, 232, 209, 0.1);
+  background: var(--color-accent-gold);
+  color: #000;
+  border: 1px solid var(--color-accent-gold);
+  box-shadow: 0 0 10px rgba(184, 134, 11, 0.1);
 }
 
 .primary::after {
-  background: var(--gradient-cyan);
+  background: var(--color-accent-gold);
 }
 
 .primary:hover {
   transform: translateY(-2px);
   color: #000;
   border-color: transparent;
-  box-shadow: 0 0 20px rgba(130, 232, 209, 0.4);
-}
-
-.primary:hover::after {
-  opacity: 1;
+  box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
 }
 
 .secondary {
@@ -110,12 +106,12 @@
 .outlineWhite {
   background: transparent;
   color: var(--color-text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .outlineWhite:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 
@@ -127,7 +123,7 @@
 }
 
 .ghost:hover {
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-gold);
 }
 
 /* Full Width */

@@ -14,13 +14,13 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   font-weight: var(--font-bold);
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-gold);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: var(--space-md);
   padding: 0.3rem 0.8rem;
-  background: rgba(130, 232, 209, 0.05);
-  border: 1px solid rgba(130, 232, 209, 0.15);
+  background: rgba(184, 134, 11, 0.05);
+  border: 1px solid rgba(184, 134, 11, 0.15);
   border-radius: var(--radius-full);
 }
 

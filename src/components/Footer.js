@@ -25,76 +25,37 @@ export default function Footer() {
           {/* Brand Column */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
-              <span className={styles.logoText}>Pann</span>
-              <span className={styles.logoAccent}>Labs</span>
+              <span className={styles.logoText}>Pann.Labs</span>
             </Link>
             <p className={styles.brandDescription}>
-              Data Integrity Meets AI Innovation. Thorough, transparent, and transformative data solutions.
+              Data integrity meets AI innovation. Founded by Peter Akpan Jr. — operating from Lagos, building for the world.
             </p>
-            <div className={styles.socials}>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
-                <LinkedinIcon size={18} />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
-                <GithubIcon size={18} />
-              </a>
-              <a href="mailto:hello@pannlabs.com" className={styles.socialLink} aria-label="Email">
-                <Mail size={18} />
-              </a>
-            </div>
+            <p className={styles.copyright}>
+              © {currentYear} Pann Labs. All rights reserved.
+            </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Practice */}
           <div className={styles.linkCol}>
-            <h4 className={styles.colTitle}>Navigation</h4>
+            <h4 className={styles.colTitle}>PRACTICE</h4>
             <ul className={styles.linkList}>
-              <li><Link href="/portfolio">Portfolio</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/tools">Tools & Resources</Link></li>
-              <li><Link href="/games">Games Arena</Link></li>
-              <li><Link href="/blog">Blog & Insights</Link></li>
+              <li><Link href="/services#data-audit">Data Integrity Audits</Link></li>
+              <li><Link href="/services#ai-integration">AI-Integrated Analytics</Link></li>
+              <li><Link href="/services#governance">Governance Frameworks</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Elsewhere */}
           <div className={styles.linkCol}>
-            <h4 className={styles.colTitle}>Services</h4>
+            <h4 className={styles.colTitle}>ELSEWHERE</h4>
             <ul className={styles.linkList}>
-              <li><Link href="/services#data-audit">Data Quality Audits</Link></li>
-              <li><Link href="/services#governance">Governance Implementation</Link></li>
-              <li><Link href="/services#ai-integration">AI Integration</Link></li>
-              <li><Link href="/services#training">Training & Workshops</Link></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="mailto:hello@pannlabs.com">hello@pannlabs.com</a></li>
             </ul>
-          </div>
-
-          {/* Contact */}
-          <div className={styles.linkCol}>
-            <h4 className={styles.colTitle}>Get in Touch</h4>
-            <ul className={styles.contactList}>
-              <li>
-                <Mail size={14} />
-                <a href="mailto:hello@pannlabs.com">hello@pannlabs.com</a>
-              </li>
-              <li>
-                <ArrowUpRight size={14} />
-                <span>Lagos, Nigeria — Available Globally</span>
-              </li>
-            </ul>
-            <Link href="/contact" className={styles.footerCta}>
-              Let&apos;s Talk
-            </Link>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className={styles.bottomBar}>
-          <p className={styles.copyright}>
-            © {currentYear} Pann Labs. Founded by Peter Akpan Jr. All rights reserved.
-          </p>
-          <div className={styles.bottomLinks}>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Use</Link>
+            <p className={styles.location}>
+              Lagos • 06.34°
+            </p>
           </div>
         </div>
       </div>

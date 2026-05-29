@@ -14,8 +14,8 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--gradient-cyan);
-  box-shadow: 0 0 15px var(--color-accent-cyan-glow);
+  background: var(--gradient-gold);
+  box-shadow: 0 0 15px var(--color-accent-gold-glow);
 }
 
 .container {
@@ -26,9 +26,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-3xl);
-  margin-bottom: var(--space-3xl);
 }
 
 .brandCol {
@@ -43,54 +42,38 @@
   gap: 2px;
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-black);
-  letter-spacing: -0.5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .logoText {
   color: var(--color-text-primary);
 }
 
-.logoAccent {
-  color: var(--color-accent-cyan);
-  text-shadow: 0 0 10px var(--color-accent-cyan-glow);
-}
+
 
 .brandDescription {
   color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-  max-width: 280px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: var(--space-lg) 0;
 }
 
-.socials {
-  display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-xs);
+.copyright {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin-top: auto;
 }
 
-.socialLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.location {
   color: var(--color-text-secondary);
-  transition: all var(--transition-fast);
-  text-decoration: none;
+  font-size: 0.875rem;
+  margin-top: var(--space-2xl);
 }
 
-.socialLink:hover {
-  background: rgba(130, 232, 209, 0.1);
-  border-color: var(--color-accent-cyan);
-  color: var(--color-accent-cyan);
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px var(--color-accent-cyan-glow);
-}
+
 
 .linkCol {
   display: flex;
@@ -99,9 +82,9 @@
 }
 
 .colTitle {
-  color: var(--color-text-primary);
-  font-size: var(--text-sm);
-  font-family: var(--font-heading);
+  color: var(--color-accent-gold);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
   font-weight: var(--font-bold);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -122,9 +105,9 @@
 }
 
 .linkList a:hover {
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-gold);
   transform: translateX(4px);
-  text-shadow: 0 0 8px var(--color-accent-cyan-glow);
+  text-shadow: 0 0 8px var(--color-accent-gold-glow);
 }
 
 .contactList {
@@ -148,7 +131,7 @@
 }
 
 .contactList a:hover {
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-gold);
 }
 
 .footerCta {
@@ -203,7 +186,7 @@
 }
 
 .bottomLinks a:hover {
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-gold);
 }
 
 @media (max-width: 1024px) {

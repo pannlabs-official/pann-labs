@@ -2,23 +2,33 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
+  { href: '/portfolio', label: 'Work' },
   { href: '/tools', label: 'Tools' },
-  { href: '/games', label: 'Games Arena' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Journal' },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,8 +51,8 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
-          <span className={styles.logoText}>Pann</span>
-          <span className={styles.logoAccent}>Labs</span>
+          <div className={styles.logoIcon}>P</div>
+          <span className={styles.logoText}>Pann.Labs</span>
         </Link>
 
         <div className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
@@ -56,12 +66,18 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+        </div>
+        
+        <div className={styles.navActions}>
+          <button className={styles.themeToggle} onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <Link
             href="/contact"
             className={styles.navCta}
             onClick={() => setIsOpen(false)}
           >
-            Let&apos;s Talk
+            Start a project &rarr;
           </Link>
         </div>
 

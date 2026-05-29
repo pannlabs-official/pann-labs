@@ -10,7 +10,7 @@
   font-family: var(--font-heading);
   font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
   font-weight: var(--font-black);
-  color: var(--color-accent-cyan);
+  color: var(--color-accent-gold);
   line-height: 1;
   letter-spacing: -1px;
 }
