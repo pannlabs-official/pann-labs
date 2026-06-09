@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Mail, ArrowUpRight } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const LinkedinIcon = ({ size = 18 }) => (
@@ -14,7 +13,6 @@ const GithubIcon = ({ size = 18 }) => (
   </svg>
 );
 
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -22,41 +20,75 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.grid}>
-          {/* Brand Column */}
+
+          {/* Brand */}
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logo}>
+              <span className={styles.logoIcon}>P</span>
               <span className={styles.logoText}>Pann.Labs</span>
             </Link>
             <p className={styles.brandDescription}>
-              Data integrity meets AI innovation. Founded by Peter Akpan Jr. — operating from Lagos, building for the world.
+              Peter Akpan — Data Analyst, analyst mentor, and solo builder.
+              Based in Uyo, Nigeria. Working in public.
             </p>
+            <div className={styles.socialRow}>
+              <a href="https://linkedin.com/in/petre-pann-profile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.socialLink}>
+                <LinkedinIcon size={17} />
+              </a>
+              <a href="https://github.com/pannlabs-official" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className={styles.socialLink}>
+                <GithubIcon size={17} />
+              </a>
+              <a href="mailto:petrepann.tech@gmail.com" aria-label="Email" className={styles.socialLink}>
+                <svg width={17} height={17} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </a>
+            </div>
             <p className={styles.copyright}>
-              © {currentYear} Pann Labs. All rights reserved.
+              © {currentYear} Peter Akpan. All rights reserved.
             </p>
           </div>
 
-          {/* Practice */}
+          {/* Explore */}
           <div className={styles.linkCol}>
-            <h4 className={styles.colTitle}>PRACTICE</h4>
+            <h4 className={styles.colTitle}>EXPLORE</h4>
             <ul className={styles.linkList}>
-              <li><Link href="/services#data-audit">Data Integrity Audits</Link></li>
-              <li><Link href="/services#ai-integration">AI-Integrated Analytics</Link></li>
-              <li><Link href="/services#governance">Governance Frameworks</Link></li>
+              <li><Link href="/portfolio">Portfolio</Link></li>
+              <li><Link href="/roadmap">Roadmap</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/tools">Tools</Link></li>
+              <li><Link href="/games">Data Trivia</Link></li>
             </ul>
           </div>
 
-          {/* Elsewhere */}
+          {/* Contact */}
           <div className={styles.linkCol}>
-            <h4 className={styles.colTitle}>ELSEWHERE</h4>
+            <h4 className={styles.colTitle}>GET IN TOUCH</h4>
             <ul className={styles.linkList}>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="mailto:hello@pannlabs.com">hello@pannlabs.com</a></li>
+              <li><Link href="/contact">Send a Message</Link></li>
+              <li>
+                <a href="mailto:petrepann.tech@gmail.com">
+                  petrepann.tech@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/petre-pann-profile" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/pannlabs-official" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </li>
             </ul>
             <p className={styles.location}>
-              Lagos • 06.34°
+              <span className={styles.locationDot} />
+              Uyo, Akwa Ibom, Nigeria
             </p>
           </div>
+
         </div>
       </div>
     </footer>

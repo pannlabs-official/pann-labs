@@ -7,6 +7,7 @@ import styles from './Navbar.module.css';
 
 const navLinks = [
   { href: '/portfolio', label: 'Work' },
+  { href: '/roadmap', label: 'Roadmap' },
   { href: '/tools', label: 'Tools' },
   { href: '/about', label: 'About' },
   { href: '/blog', label: 'Journal' },

@@ -1,297 +1,300 @@
 'use client';
 
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Eye, Sparkles, Users, Briefcase, BookOpen, Gamepad2 } from 'lucide-react';
+import { ArrowRight, BookOpen, Briefcase, Users, ExternalLink } from 'lucide-react';
 import Button from '@/components/Button';
-import SectionHeading from '@/components/SectionHeading';
 import ProjectCard from '@/components/ProjectCard';
-import StatCounter from '@/components/StatCounter';
 import { projects } from '@/data/projects';
 import styles from './page.module.css';
+
+// Load 3D scene client-side only (no SSR)
+const HeroScene = dynamic(() => import('@/components/HeroScene'), {
+  ssr: false,
+  loading: () => <div className={styles.canvasPlaceholder} />,
+});
 
 const featuredProjects = projects.filter(p => p.featured);
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] } }
+  hidden:  { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.25, 1, 0.5, 1] } },
 };
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
+const stagger = {
+  hidden:  { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
 };
+
+const stats = [
+  { value: '6+',   label: 'Projects shipped' },
+  { value: '3k+',  label: 'Rows cleaned & documented' },
+  { value: '30+',  label: 'Insights surfaced' },
+  { value: '9mo',  label: 'At Start Innovation Hub' },
+];
+
+const whatIDo = [
+  {
+    icon: <Briefcase size={22} />,
+    title: 'Analyse data at SIH',
+    body: 'Working daily with Sales, HR, and Supply Chain data at Start Innovation Hub in Uyo. Real datasets, real stakeholders, real deadlines.',
+  },
+  {
+    icon: <Users size={22} />,
+    title: 'Teach & mentor analysts',
+    body: 'Training junior analysts on interpretation, reporting, and documentation discipline. Teaching sharpens my own thinking.',
+  },
+  {
+    icon: <BookOpen size={22} />,
+    title: 'Build & document in public',
+    body: 'Every project on this site comes with methodology, decisions, and lessons learned. Not just outputs — the full process.',
+  },
+];
 
 export default function HomePage() {
   return (
     <>
-      {/* ====== HERO SECTION ====== */}
+      {/* ── HERO ─────────────────────────────────────────────── */}
       <section className={styles.hero}>
-        <div className={styles.heroBg}>
-          <div className={styles.glowOrb1}></div>
-          <div className={styles.glowOrb2}></div>
-          <div className={styles.glowOrb3}></div>
-          <div className={styles.heroOverlay} />
+        {/* 3D canvas background */}
+        <div className={styles.canvasHost}>
+          <HeroScene />
         </div>
 
-        <motion.div 
-          className={`container ${styles.heroContent}`}
+        {/* Ambient glow */}
+        <div className={styles.heroGlow} />
+
+        <motion.div
+          className={`container ${styles.heroInner}`}
           initial="hidden"
           animate="visible"
-          variants={staggerContainer}
+          variants={stagger}
         >
           <div className={styles.heroText}>
             <motion.span variants={fadeUp} className={styles.heroBadge}>
-              <span className={styles.goldDot}></span> STUDIO OF PETER AKPAN JR.
+              <span className={styles.liveDot} />
+              Data Analyst · Uyo, Nigeria
             </motion.span>
+
             <motion.h1 variants={fadeUp} className={styles.heroTitle}>
-              Turn messy data into<br />
-              <span className="gold-accent">strategic assets.</span>
+              I turn data into<br />
+              <span className="gold-gradient">decisions.</span>
             </motion.h1>
-            <motion.p variants={fadeUp} className={styles.heroSubtitle}>
-              Pann Labs delivers rigorous methodology, transparent documentation, and AI-integrated tooling for high-end analytics.
+
+            <motion.p variants={fadeUp} className={styles.heroSub}>
+              Then explain what it means in plain English.
+              Working at Start Innovation Hub. Building Pann Labs in public.
+              Documenting everything so others can learn from it.
             </motion.p>
+
             <motion.div variants={fadeUp} className={styles.heroCtas}>
-              <Button href="/portfolio" variant="primary" size="lg" icon={<ArrowRight size={18} />}>
-                View the work
+              <Button href="/portfolio" variant="primary" size="lg" icon={<ArrowRight size={17} />}>
+                See the work
               </Button>
-              <Button href="/contact" variant="outlineWhite" size="lg">
-                Start a project
+              <Button href="/about" variant="outlineWhite" size="lg">
+                About me
               </Button>
             </motion.div>
           </div>
 
-          <motion.div variants={fadeUp} className={styles.heroShowcase}>
-            <div className={styles.showcaseGlow}></div>
-            <img 
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
-              alt="Data Analytics Dashboard" 
-              className={styles.showcaseImage} 
-            />
+          {/* Stats strip */}
+          <motion.div variants={fadeUp} className={styles.statsStrip}>
+            {stats.map((s) => (
+              <div key={s.label} className={styles.statItem}>
+                <span className={styles.statValue}>{s.value}</span>
+                <span className={styles.statLabel}>{s.label}</span>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
 
-        <div className={styles.heroScrollIndicator}>
+        <div className={styles.scrollHint}>
           <div className={styles.scrollLine} />
         </div>
       </section>
 
-      {/* ====== CORE CAPABILITIES ====== */}
-      <section className={`section ${styles.capabilitiesSection}`}>
-        <div className={`container ${styles.capabilitiesContainer}`}>
-          <div className={styles.capabilitiesHeader}>
-            <span className={styles.sectionLabel}>CORE CAPABILITIES</span>
-            <h2 className={styles.sectionTitle}>Built for complex ecosystems.</h2>
-          </div>
+      {/* ── WHAT I DO ──────────────────────────────────────── */}
+      <section className={`section ${styles.whatSection}`}>
+        <div className="container">
+          <motion.div
+            className={styles.sectionLabel}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            What I do
+          </motion.div>
+          <motion.h2
+            className={styles.sectionTitle}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            Three things, done seriously.
+          </motion.h2>
 
-          <div className={styles.featureBlocks}>
-            {/* Block 1 */}
-            <motion.div 
-              className={styles.featureBlock}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={fadeUp}
-            >
-              <div className={styles.featureText}>
-                <h3>Data Integrity Audits</h3>
-                <p>Ensure your underlying data is accurate, consistent, and ready for advanced modeling. We implement rigorous checks, anomaly detection, and schema validations to build trust in your metrics.</p>
-                <ul className={styles.featureList}>
-                  <li><Sparkles size={16} className={styles.goldIcon} /> Automated pipeline testing</li>
-                  <li><Sparkles size={16} className={styles.goldIcon} /> Null and drift detection</li>
-                </ul>
-              </div>
-              <div className={styles.featureImageWrapper}>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="Data Audits" className={styles.featureImage} />
-              </div>
-            </motion.div>
-
-            {/* Block 2 */}
-            <motion.div 
-              className={`${styles.featureBlock} ${styles.reversed}`}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={fadeUp}
-            >
-              <div className={styles.featureText}>
-                <h3>AI-Integrated Analytics</h3>
-                <p>Deploy cutting-edge LLMs and machine learning models securely within your infrastructure to automate insights, classify unstructured data, and forecast trends with precision.</p>
-                <ul className={styles.featureList}>
-                  <li><Sparkles size={16} className={styles.goldIcon} /> Predictive modeling</li>
-                  <li><Sparkles size={16} className={styles.goldIcon} /> NLP for unstructured text</li>
-                </ul>
-              </div>
-              <div className={styles.featureImageWrapper}>
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop" alt="AI Analytics" className={styles.featureImage} />
-              </div>
-            </motion.div>
-
-            {/* Block 3 */}
-            <motion.div 
-              className={styles.featureBlock}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={fadeUp}
-            >
-              <div className={styles.featureText}>
-                <h3>Governance Frameworks</h3>
-                <p>Establish clear stewardship playbooks, data dictionaries, and compliance protocols that scale with your team and ensure regulatory peace of mind.</p>
-                <ul className={styles.featureList}>
-                  <li><Sparkles size={16} className={styles.goldIcon} /> Stewardship playbooks</li>
-                  <li><Sparkles size={16} className={styles.goldIcon} /> Access control modeling</li>
-                </ul>
-              </div>
-              <div className={styles.featureImageWrapper}>
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1000&auto=format&fit=crop" alt="Governance" className={styles.featureImage} />
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            className={styles.whatGrid}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={stagger}
+          >
+            {whatIDo.map((item) => (
+              <motion.div key={item.title} variants={fadeUp} className={styles.whatCard}>
+                <div className={styles.whatIcon}>{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* ====== FEATURED PROJECTS ====== */}
-      <section className="section">
+      {/* ── FEATURED PROJECTS ─────────────────────────────── */}
+      <section className="section-alt">
         <div className="container">
-          <div className={styles.flagshipHeader}>
-            <div className={styles.flagshipTopRow}>
-              <span className={styles.sectionLabel}>SELECTED WORK</span>
+          <div className={styles.sectionHeader}>
+            <div>
+              <div className={styles.sectionLabel}>Selected work</div>
+              <h2 className={styles.sectionTitle}>Projects worth reading.</h2>
             </div>
-            <div className={styles.flagshipDivider}></div>
-            <div className={styles.flagshipBottomRow}>
-              <h2 className={styles.sectionTitle}>Flagship projects</h2>
-              <Link href="/portfolio" className={styles.allProjectsLink}>
-                All projects &rarr;
-              </Link>
-            </div>
+            <Link href="/portfolio" className={styles.viewAll}>
+              All projects <ArrowRight size={15} />
+            </Link>
           </div>
 
-          <div className={styles.projectsGrid}>
-            {featuredProjects.map((project, index) => (
-              <ProjectCard key={project.slug} project={project} index={index} />
+          <motion.div
+            className={styles.projectsGrid}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={stagger}
+          >
+            {featuredProjects.map((project, i) => (
+              <motion.div key={project.slug} variants={fadeUp}>
+                <ProjectCard project={project} index={i} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── CURRENTLY BUILDING ────────────────────────────── */}
+      <section className="section">
+        <div className="container">
+          <motion.div
+            className={styles.buildingCard}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className={styles.buildingLeft}>
+              <span className={styles.buildingBadge}>
+                <span className="dot-live" /> Currently building
+              </span>
+              <h2 className={styles.buildingTitle}>Pann Labs</h2>
+              <p className={styles.buildingDesc}>
+                A personal studio for data analytics, AI tooling, and open knowledge sharing.
+                Every project is documented and published so other analysts can learn from the
+                process — not just the result.
+              </p>
+              <div className={styles.buildingLinks}>
+                <Button href="/portfolio" variant="primary" icon={<ArrowRight size={16} />}>
+                  See what&apos;s been built
+                </Button>
+                <Button href="/blog" variant="outlineGold">
+                  Follow the journey
+                </Button>
+              </div>
+            </div>
+            <div className={styles.buildingRight}>
+              {[
+                { label: 'Data Integrity Bible', status: 'shipped' },
+                { label: 'Retail Cleaning Report', status: 'shipped' },
+                { label: 'Teen Mental Health EDA', status: 'shipped' },
+                { label: 'Oil & Gas Dashboard', status: 'shipped' },
+                { label: 'AI Data Profiler', status: 'building' },
+                { label: 'Interactive Tools', status: 'next' },
+              ].map((item) => (
+                <div key={item.label} className={`${styles.buildItem} ${styles[item.status]}`}>
+                  <span className={styles.buildDot} />
+                  <span>{item.label}</span>
+                  <span className={styles.buildStatus}>{item.status}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── LATEST FROM BLOG ──────────────────────────────── */}
+      <section className="section-alt">
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <div>
+              <div className={styles.sectionLabel}>From the blog</div>
+              <h2 className={styles.sectionTitle}>Thoughts worth sharing.</h2>
+            </div>
+            <Link href="/blog" className={styles.viewAll}>
+              All posts <ArrowRight size={15} />
+            </Link>
+          </div>
+
+          <div className={styles.blogRow}>
+            {[
+              {
+                tag: 'Data Integrity',
+                title: 'Why Data Integrity Matters More Than Ever in the Age of AI',
+                excerpt: 'Most organisations feed their AI systems with data they wouldn\'t trust for a quarterly report.',
+                href: '/blog/why-data-integrity-matters-more-than-ever',
+                time: '8 min read',
+              },
+              {
+                tag: 'Best Practices',
+                title: 'The Discipline of Documenting Every Data Decision',
+                excerpt: 'I document not just what I changed — but what I chose NOT to change, and why.',
+                href: '/blog/documenting-every-data-decision',
+                time: '6 min read',
+              },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} className={styles.blogCard}>
+                <span className={styles.blogTag}>{post.tag}</span>
+                <h3 className={styles.blogTitle}>{post.title}</h3>
+                <p className={styles.blogExcerpt}>{post.excerpt}</p>
+                <span className={styles.blogMeta}>{post.time} <ArrowRight size={13} /></span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ====== AUDIENCE PATHWAYS ====== */}
-      <section className="section-alt">
-        <div className="container">
-          <SectionHeading
-            label="Who We Serve"
-            title="Solutions for Every Stakeholder"
-            subtitle="Tailored approaches for hiring managers, consulting clients, and data professionals"
-          />
-
-          <motion.div 
-            className={styles.audienceGrid}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeUp} className={`card ${styles.audienceCard}`}>
-              <div className={styles.audienceImageWrapper}>
-                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=600&auto=format&fit=crop" alt="Hiring Managers" className={styles.audienceImage} />
-              </div>
-              <div className={styles.audienceContent}>
-                <h3>Hiring Managers</h3>
-                <p>
-                  Proven track record across multiple domains. Explore my portfolio to see multi-industry
-                  expertise and impact-driven results.
-                </p>
-                <Link href="/portfolio" className={styles.audienceLink}>
-                  Explore Portfolio <ArrowRight size={14} />
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className={`card ${styles.audienceCard}`}>
-              <div className={styles.audienceImageWrapper}>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop" alt="Consulting Clients" className={styles.audienceImage} />
-              </div>
-              <div className={styles.audienceContent}>
-                <h3>Consulting Clients</h3>
-                <p>
-                  Clear case studies, transparent process documentation, and systems thinking.
-                  See how we solve messy data problems.
-                </p>
-                <Link href="/services" className={styles.audienceLink}>
-                  View Services <ArrowRight size={14} />
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className={`card ${styles.audienceCard}`}>
-              <div className={styles.audienceImageWrapper}>
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" alt="Peers & Community" className={styles.audienceImage} />
-              </div>
-              <div className={styles.audienceContent}>
-                <h3>Peers &amp; Community</h3>
-                <p>
-                  Deep expertise resources, interactive tools, and open frameworks.
-                  Join a community of rigorous data professionals.
-                </p>
-                <Link href="/tools" className={styles.audienceLink}>
-                  Explore Resources <ArrowRight size={14} />
-                </Link>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ====== GAMES ARENA PROMO ====== */}
-      <section className="section">
-        <div className="container">
-          <motion.div 
-            className={styles.gamesPromo}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className={styles.gamesPromoContent}>
-              <span className={styles.heroBadge}>
-                <Gamepad2 size={14} /> New Feature
-              </span>
-              <h2>Test Your Data Skills</h2>
-              <p>
-                Step into the Games Arena and challenge yourself with our interactive Data Trivia. 
-                Test your knowledge on data integrity, SQL, AI, and analytics best practices.
-              </p>
-              <Button href="/games" variant="primary" size="lg" icon={<ArrowRight size={18} />}>
-                Play Data Trivia
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ====== CTA SECTION ====== */}
+      {/* ── CTA ───────────────────────────────────────────── */}
       <section className={styles.ctaSection}>
-        <motion.div 
-          className={`container ${styles.ctaContent}`}
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div
+          className={`container ${styles.ctaInner}`}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className={styles.ctaTitle}>Ready to Turn Your Data Into a Strategic Asset?</h2>
-          <p className={styles.ctaSubtitle}>
-            Whether you&apos;re hiring, need consulting, or want to collaborate—let&apos;s talk about how
-            data integrity and AI can transform your work.
+          <span className={styles.ctaBadge}>Open to opportunities</span>
+          <h2 className={styles.ctaTitle}>
+            Have a data problem?<br />
+            <span className="gold-gradient">Let&apos;s solve it.</span>
+          </h2>
+          <p className={styles.ctaSub}>
+            Open to data analyst roles, freelance projects, and collaboration.
+            If you&apos;re building something with data and need a serious analyst — reach out.
           </p>
           <div className={styles.ctaButtons}>
-            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight size={18} />}>
-              Get in Touch
+            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight size={17} />}>
+              Get in touch
             </Button>
-            <Button href="/about" variant="outlineWhite" size="lg">
-              Learn More About Us
+            <Button href="/portfolio" variant="outlineWhite" size="lg">
+              View the work
             </Button>
           </div>
         </motion.div>

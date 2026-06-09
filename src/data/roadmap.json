@@ -1,0 +1,1838 @@
+[
+  {
+    "id": "stage1",
+    "number": "01",
+    "title": "What is Data Analytics",
+    "subtitle": "Build the mental model before touching any tool.",
+    "time": "~1 week",
+    "weeks": 1,
+    "sections": [
+      {
+        "title": "Core Concepts",
+        "topics": [
+          {
+            "name": "What is data?",
+            "desc": "Raw facts and figures with no meaning on their own — the rawest form of information before context is applied."
+          },
+          {
+            "name": "What is analytics?",
+            "desc": "The process of turning raw data into decisions. Not just looking at numbers — asking what they mean and what to do next."
+          },
+          {
+            "name": "Data vs information vs insights",
+            "desc": "Data is raw. Information is data with context. Insights are information that drives action. Know the difference — most analysts stop at information."
+          },
+          {
+            "name": "The analytics lifecycle",
+            "desc": "The most critical concept in this entire roadmap. Define the question → collect data → clean → analyze → visualize → communicate → act. Every project follows this arc."
+          },
+          {
+            "name": "Descriptive Analytics",
+            "desc": "What happened? Looking backward at historical data to understand past performance. The foundation of all analytics work."
+          },
+          {
+            "name": "Diagnostic Analytics",
+            "desc": "Why did it happen? Drilling into root causes. Moving from reporting what occurred to understanding why."
+          },
+          {
+            "name": "Predictive Analytics",
+            "desc": "What will happen? Using historical patterns to forecast future outcomes. Requires statistical thinking and clean data."
+          },
+          {
+            "name": "Prescriptive Analytics",
+            "desc": "What should we do? The highest level — recommending specific actions based on predicted outcomes. Where analysts become decision partners."
+          },
+          {
+            "name": "The analyst's role in a business",
+            "desc": "You are a translator between data and decisions. Your job is not to produce reports — it is to make the business smarter."
+          },
+          {
+            "name": "How data drives decisions",
+            "desc": "Data does not speak for itself. You have to frame it, contextualize it, and connect it to what the business cares about."
+          },
+          {
+            "name": "The modern data stack",
+            "desc": "Ingestion → Storage → Transformation → BI. Knowing where your tools fit in this chain makes you a far more effective analyst."
+          }
+        ]
+      },
+      {
+        "title": "Business Fundamentals",
+        "topics": [
+          {
+            "name": "Revenue",
+            "desc": "Total income generated before any costs are deducted. The top line. Always know what drives it."
+          },
+          {
+            "name": "Profit & Cost",
+            "desc": "Revenue minus expenses. Gross profit is before operating costs. Net profit is after everything. Analysts who understand cost structure are rare."
+          },
+          {
+            "name": "Gross Margin & Net Margin",
+            "desc": "Percentages that show how efficiently a business turns revenue into profit. Critical for comparing companies across different sizes."
+          },
+          {
+            "name": "Customer Acquisition Cost (CAC)",
+            "desc": "How much does it cost to acquire one customer? If CAC exceeds LTV, the business is dying — even if revenue looks healthy."
+          },
+          {
+            "name": "Customer Lifetime Value (LTV)",
+            "desc": "The total revenue a customer is expected to generate over their entire relationship with the business. Pair with CAC for the full picture."
+          },
+          {
+            "name": "Churn Rate & Retention Rate",
+            "desc": "Churn is the percentage of customers lost in a period. Retention is the inverse. High churn destroys LTV regardless of acquisition volume."
+          },
+          {
+            "name": "Conversion Rate",
+            "desc": "The percentage of people who take a desired action. Applies to sales funnels, marketing campaigns, and product flows."
+          },
+          {
+            "name": "Operational KPIs",
+            "desc": "Metrics that measure how efficiently the business runs day-to-day — SLA adherence, ticket resolution time, delivery rates."
+          },
+          {
+            "name": "Financial KPIs",
+            "desc": "Metrics that measure financial health — EBITDA, burn rate, runway, working capital. Know these before walking into any stakeholder meeting."
+          }
+        ]
+      },
+      {
+        "title": "Problem Solving & Business Thinking",
+        "topics": [
+          {
+            "name": "Business questions vs analytical questions",
+            "desc": "\"Why are sales dropping?\" is a business question. \"What is the month-over-month revenue change by region?\" is the analytical version. Learn to translate between the two."
+          },
+          {
+            "name": "KPI design",
+            "desc": "Not every metric is a KPI. A KPI is a metric tied directly to a business objective. Most dashboards have too many metrics and too few KPIs."
+          },
+          {
+            "name": "Root cause thinking",
+            "desc": "Symptoms point to problems. Problems have causes. Do not stop at the first answer — ask \"why\" at least three times before presenting a finding."
+          },
+          {
+            "name": "Hypothesis-driven analysis",
+            "desc": "Start with a hypothesis, then use data to test it. This is faster and more rigorous than exploring data without direction."
+          },
+          {
+            "name": "Defining success metrics",
+            "desc": "Before any project starts, define what good looks like. If you cannot measure success, you cannot claim it."
+          },
+          {
+            "name": "Understanding business objectives",
+            "desc": "Every analytical request exists to serve a business goal. If you do not know the goal, you will answer the wrong question beautifully."
+          }
+        ]
+      },
+      {
+        "title": "Data Quality Fundamentals",
+        "topics": [
+          {
+            "name": "Missing values",
+            "desc": "Data that is absent where it should exist. Missing is not the same as zero. How you handle it changes your results entirely."
+          },
+          {
+            "name": "Duplicate records",
+            "desc": "The same data recorded more than once. Deduplication is one of the first things you do on any real dataset."
+          },
+          {
+            "name": "Invalid records",
+            "desc": "Data that exists but is logically wrong — a birthdate in the future, a negative price, an email with no \"@\". Always validate before analysing."
+          },
+          {
+            "name": "Inconsistent formatting",
+            "desc": "The same value stored in multiple formats — \"Nigeria\", \"NG\", \"NGR\". Standardisation before analysis is non-negotiable."
+          },
+          {
+            "name": "Outliers",
+            "desc": "Values that sit far outside the normal range. Sometimes they are errors. Sometimes they are the most important finding in your dataset."
+          },
+          {
+            "name": "Data validation",
+            "desc": "Rules that enforce data quality at the point of entry. Prevention is cheaper than cleaning."
+          },
+          {
+            "name": "Data governance basics",
+            "desc": "Who owns the data? Who can access it? How is it maintained? Governance is what separates mature data organisations from chaotic ones."
+          }
+        ]
+      },
+      {
+        "title": "Soft Skills",
+        "topics": [
+          {
+            "name": "Critical thinking",
+            "desc": "Question everything — including your own analysis. The data is never wrong, but your interpretation might be."
+          },
+          {
+            "name": "Problem solving",
+            "desc": "Break complex problems into smaller, answerable questions. Structured decomposition is what separates good analysts from great ones."
+          },
+          {
+            "name": "Business communication",
+            "desc": "The ability to explain a technical finding in one sentence that a non-technical stakeholder can act on. This is the hardest skill to develop."
+          },
+          {
+            "name": "Curiosity & asking good questions",
+            "desc": "The best analysts are relentlessly curious. A good question saves 10 hours of analysis in the wrong direction."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage2",
+    "number": "02",
+    "title": "Math & Statistics",
+    "subtitle": "The language data speaks. You need to be fluent before you can interpret anything.",
+    "time": "~2 weeks",
+    "weeks": 2,
+    "sections": [
+      {
+        "title": "Descriptive Statistics",
+        "topics": [
+          {
+            "name": "Mean",
+            "desc": "The average. Useful but sensitive to extreme values. Always check if outliers are pulling it away from the typical value."
+          },
+          {
+            "name": "Median",
+            "desc": "The middle value when sorted. More robust than the mean when your data has outliers or is skewed. Use it for income and pricing data."
+          },
+          {
+            "name": "Mode",
+            "desc": "The most frequently occurring value. Most useful for categorical data — what product is ordered most, what city appears most often."
+          },
+          {
+            "name": "Range",
+            "desc": "The distance between the minimum and maximum values. A quick measure of spread, but easily distorted by a single outlier."
+          },
+          {
+            "name": "Quartiles",
+            "desc": "Values that divide your data into four equal parts. Q1 (25th), Q2 (50th/median), Q3 (75th). Essential for box plots and distribution analysis."
+          },
+          {
+            "name": "Percentiles",
+            "desc": "The value below which a given percentage of data falls. The 90th percentile means 90% of values fall below that point."
+          }
+        ]
+      },
+      {
+        "title": "Variability",
+        "topics": [
+          {
+            "name": "Variance",
+            "desc": "The average of the squared differences from the mean. Measures how spread out your data is. Higher variance means more volatility."
+          },
+          {
+            "name": "Standard Deviation",
+            "desc": "The square root of variance. Brings variability back to the original unit of measurement. The most common measure of spread in data analytics."
+          },
+          {
+            "name": "Interquartile Range (IQR)",
+            "desc": "Q3 minus Q1. The middle 50% of your data. Used to detect outliers — any value more than 1.5x IQR beyond Q1 or Q3 is flagged."
+          }
+        ]
+      },
+      {
+        "title": "Probability",
+        "topics": [
+          {
+            "name": "Basic probability concepts",
+            "desc": "The likelihood of an event occurring, expressed between 0 and 1. The foundation of all statistical inference and prediction."
+          },
+          {
+            "name": "Conditional probability",
+            "desc": "The probability of event A given that event B has already occurred. Critical for understanding dependencies in your data."
+          },
+          {
+            "name": "Independent events",
+            "desc": "When the occurrence of one event has no effect on the probability of another. Most real-world data involves dependent events — know the difference."
+          },
+          {
+            "name": "Expected value",
+            "desc": "The probability-weighted average of all possible outcomes. Used to make decisions under uncertainty — standard in business case analysis."
+          }
+        ]
+      },
+      {
+        "title": "Distributions",
+        "topics": [
+          {
+            "name": "Normal Distribution",
+            "desc": "The bell curve. Most natural phenomena follow it. When your data is normally distributed, the mean equals the median and powerful statistical tools apply."
+          },
+          {
+            "name": "Skewness",
+            "desc": "A measure of asymmetry in your distribution. Positive skew means the tail is on the right (income data). Negative skew means it is on the left."
+          },
+          {
+            "name": "Kurtosis",
+            "desc": "How fat or thin the tails of your distribution are. High kurtosis means more extreme values — important in risk and fraud analysis."
+          },
+          {
+            "name": "Z-Scores",
+            "desc": "How many standard deviations a value sits from the mean. A Z-score above 3 or below -3 signals an outlier. Used in anomaly detection."
+          }
+        ]
+      },
+      {
+        "title": "Relationships",
+        "topics": [
+          {
+            "name": "Correlation",
+            "desc": "A measure of how two variables move together, from -1 to +1. Zero means no linear relationship. Strong correlation demands investigation."
+          },
+          {
+            "name": "Covariance",
+            "desc": "The direction of the relationship between two variables. Positive means they move together. Negative means they move in opposite directions."
+          },
+          {
+            "name": "Correlation vs causation",
+            "desc": "The most abused concept in analytics. Two things can be perfectly correlated and completely unrelated. Never present correlation as proof of cause."
+          }
+        ]
+      },
+      {
+        "title": "Statistical Thinking",
+        "topics": [
+          {
+            "name": "Sampling",
+            "desc": "Analysing a subset of data to draw conclusions about the whole. The quality of your sample determines the validity of your conclusions."
+          },
+          {
+            "name": "Population vs sample",
+            "desc": "Population is every possible data point. Sample is what you actually have. Understanding which you are working with changes how you interpret results."
+          },
+          {
+            "name": "Confidence intervals",
+            "desc": "A range of values within which the true population parameter likely falls. A 95% CI means if you repeated the study 100 times, 95 results would contain the true value."
+          },
+          {
+            "name": "Statistical significance",
+            "desc": "The probability that your result is not due to random chance. A p-value below 0.05 is the conventional threshold — but context always matters."
+          },
+          {
+            "name": "Hypothesis testing (intro)",
+            "desc": "A structured method for testing whether an observed effect is real or random. Null hypothesis vs alternative hypothesis. Know the framework before running tests."
+          }
+        ]
+      },
+      {
+        "title": "Business Interpretation",
+        "topics": [
+          {
+            "name": "Interpreting statistical results",
+            "desc": "Numbers without context mislead. Always ask: is this difference meaningful to the business, not just statistically significant?"
+          },
+          {
+            "name": "Identifying meaningful patterns",
+            "desc": "Not every pattern is worth reporting. A 0.1% change in a metric that does not affect revenue is noise. Train yourself to filter for signal."
+          },
+          {
+            "name": "Avoiding misleading conclusions",
+            "desc": "Simpson's paradox, cherry-picking date ranges, ignoring base rates — learn the common traps analysts fall into before you fall into them yourself."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage3",
+    "number": "03",
+    "title": "Excel",
+    "subtitle": "The most underestimated tool in the analytics stack. Master it before you dismiss it.",
+    "time": "~3 weeks",
+    "weeks": 3,
+    "sections": [
+      {
+        "title": "Fundamentals",
+        "topics": [
+          {
+            "name": "Interface and navigation",
+            "desc": "Ribbons, cell references, keyboard shortcuts. Speed in Excel is a professional signal — slow analysts get replaced by faster ones."
+          },
+          {
+            "name": "Data entry and formatting",
+            "desc": "How data is stored determines how it can be analysed. Numbers stored as text, dates stored as strings — formatting errors corrupt entire analyses."
+          },
+          {
+            "name": "Tables and named ranges",
+            "desc": "Convert your data to a Table immediately. It auto-expands, supports structured references, and makes your formulas readable."
+          },
+          {
+            "name": "Data validation",
+            "desc": "Restrict what can be entered into a cell. Dropdowns, number ranges, custom rules. Prevention is faster than cleaning."
+          }
+        ]
+      },
+      {
+        "title": "Core Functions",
+        "topics": [
+          {
+            "name": "IF & IFS",
+            "desc": "Return one value if a condition is true, another if false. IFS handles multiple conditions cleanly without nesting. The most fundamental logic function."
+          },
+          {
+            "name": "SUMIFS",
+            "desc": "Sum values that meet multiple criteria. Not SUMIF — always SUMIFS. More flexible, handles multiple conditions, same syntax."
+          },
+          {
+            "name": "COUNTIFS",
+            "desc": "Count cells that meet multiple criteria. Pair with SUMIFS to build frequency and volume analysis across any combination of filters."
+          },
+          {
+            "name": "AVERAGEIFS",
+            "desc": "Average values that meet multiple criteria. Useful for computing segment-level averages without building a Pivot Table."
+          },
+          {
+            "name": "TEXT functions",
+            "desc": "LEFT, RIGHT, MID, TRIM, PROPER, CONCATENATE, TEXTJOIN. Cleaning and reformatting text data — unavoidable in real-world datasets."
+          },
+          {
+            "name": "Date functions",
+            "desc": "TODAY, NOW, DATEDIF, EOMONTH, WEEKDAY, NETWORKDAYS. Dates are among the most common data types — and the most frequently broken."
+          },
+          {
+            "name": "Logical functions",
+            "desc": "AND, OR, NOT, IFERROR, IFNA. Combine conditions and handle errors gracefully. Clean error handling is what separates professional spreadsheets from amateur ones."
+          }
+        ]
+      },
+      {
+        "title": "Lookup & Reference",
+        "topics": [
+          {
+            "name": "XLOOKUP",
+            "desc": "The modern replacement for every lookup function. Searches any direction, returns multiple columns, handles not-found cases natively. Learn this first."
+          },
+          {
+            "name": "INDEX MATCH",
+            "desc": "The combination that XLOOKUP was built to replace. Still critical to understand — it works in older Excel versions and underpins how Excel retrieval logic works."
+          },
+          {
+            "name": "FILTER",
+            "desc": "Returns an array of rows that meet your criteria. Dynamic, spills automatically, and replaces a dozen workarounds. Essential for modern Excel workflows."
+          },
+          {
+            "name": "UNIQUE",
+            "desc": "Returns a list of unique values from a range. Combine with SORT and FILTER for dynamic, self-updating lists that never need manual refreshing."
+          },
+          {
+            "name": "DGET",
+            "desc": "Extracts a single value from a database that matches specified criteria. Useful when you need precision retrieval without the overhead of a full lookup setup."
+          }
+        ]
+      },
+      {
+        "title": "Data Cleaning",
+        "topics": [
+          {
+            "name": "Remove duplicates",
+            "desc": "The first thing you do on any raw dataset. Always check before removing — duplicates are sometimes intentional."
+          },
+          {
+            "name": "Text to columns",
+            "desc": "Split a single column into multiple columns by delimiter. Handles the \"first name last name in one cell\" problem and countless import issues."
+          },
+          {
+            "name": "Flash Fill",
+            "desc": "Excel recognises patterns in your data entry and fills the rest automatically. Powerful for reformatting — learns from one or two examples."
+          },
+          {
+            "name": "Conditional formatting",
+            "desc": "Visual cues that highlight patterns, outliers, and thresholds automatically. Not decoration — a data quality and communication tool."
+          }
+        ]
+      },
+      {
+        "title": "Power Query",
+        "topics": [
+          {
+            "name": "Connecting data sources",
+            "desc": "Pull data from CSVs, databases, web pages, and SharePoint directly into Excel without copy-pasting. Every refresh pulls fresh data automatically."
+          },
+          {
+            "name": "Data cleaning in Power Query",
+            "desc": "Remove nulls, fix data types, trim whitespace, replace values. All recorded as steps that re-run every time you refresh. This is repeatable cleaning."
+          },
+          {
+            "name": "Data transformation",
+            "desc": "Pivot, unpivot, group by, add custom columns. Reshaping data into the structure your analysis needs before it hits the spreadsheet."
+          },
+          {
+            "name": "Append queries",
+            "desc": "Stack multiple tables vertically — combining January, February, and March files into one dataset automatically."
+          },
+          {
+            "name": "Merge queries",
+            "desc": "Join two tables on a common key, like a SQL JOIN inside Excel. Left join, inner join, full outer — all available in the interface."
+          }
+        ]
+      },
+      {
+        "title": "Analysis & Dashboards",
+        "topics": [
+          {
+            "name": "Pivot Tables",
+            "desc": "Summarise thousands of rows into a cross-tabulation in seconds. The most important analysis tool in Excel. Every analyst must be fluent."
+          },
+          {
+            "name": "Pivot Charts",
+            "desc": "Charts connected directly to Pivot Tables. Dynamic, filterable, and automatically updated when your data changes."
+          },
+          {
+            "name": "Slicers",
+            "desc": "Visual filter buttons connected to Pivot Tables and charts. They make your dashboards interactive without a single line of code."
+          },
+          {
+            "name": "KPI dashboards",
+            "desc": "A single-screen view of the metrics that matter. Design for the decision, not the data — show only what drives action."
+          },
+          {
+            "name": "Interactive dashboards",
+            "desc": "Slicers, dropdowns, and dynamic charts that respond to user input. The goal is to let the stakeholder explore without needing to ask you."
+          },
+          {
+            "name": "Executive dashboards",
+            "desc": "Three numbers, one message, zero clutter. Executive dashboards communicate a decision — not a summary of everything you analysed."
+          }
+        ]
+      },
+      {
+        "title": "AI in Excel",
+        "isAI": true,
+        "topics": [
+          {
+            "name": "Copilot for Excel",
+            "desc": "Microsoft's native AI assistant. Generates formulas, summarises data, and creates charts from natural language prompts directly in the ribbon."
+          },
+          {
+            "name": "Claude for formula generation",
+            "desc": "Describe what you want to calculate in plain English. Claude writes the formula, explains it, and handles edge cases you did not think of."
+          },
+          {
+            "name": "ChatGPT for data cleaning",
+            "desc": "Paste a sample of your messy data and ask for a cleaning strategy. Gets you from raw to structured faster than debugging manually."
+          },
+          {
+            "name": "Automated analysis with AI",
+            "desc": "Use AI to generate interpretation of your Pivot Table results, write the narrative for your dashboard, and surface patterns you might have missed."
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Social Media Analytics Dashboard",
+        "desc": "Analyse social media performance across platforms, campaigns, and content types using Excel and Power Pivot.",
+        "icon": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"2\" y=\"9\" width=\"3\" height=\"7\" rx=\"1\" fill=\"#217346\"/><rect x=\"7.5\" y=\"5\" width=\"3\" height=\"11\" rx=\"1\" fill=\"#217346\" opacity=\".7\"/><rect x=\"13\" y=\"2\" width=\"3\" height=\"14\" rx=\"1\" fill=\"#217346\" opacity=\".45\"/></svg>",
+        "tag": "Excel · Power Pivot",
+        "url": "https://github.com/datawithdany/social-media-analytics-dashboard"
+      },
+      {
+        "title": "FastShip Logistics Analysis",
+        "desc": "Investigate 2,000 shipment records to identify delivery failures, carrier inefficiencies, and $31K in cost savings.",
+        "icon": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><path d=\"M2 13l4-4 3 2 4-5 3 2\" stroke=\"#217346\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M2 16h14\" stroke=\"#217346\" stroke-width=\"1.2\" stroke-linecap=\"round\" opacity=\".4\"/></svg>",
+        "tag": "Excel · Power Pivot · DAX",
+        "url": "https://github.com/datawithdany/fastship-logistics-excel-analysis"
+      }
+    ],
+    "hasDigDeep": true
+  },
+  {
+    "id": "stage4",
+    "number": "04",
+    "title": "SQL",
+    "subtitle": "The language every data professional must speak. There is no shortcut here.",
+    "time": "~4 weeks",
+    "weeks": 4,
+    "sections": [
+      {
+        "title": "Database Fundamentals",
+        "topics": [
+          {
+            "name": "What is a database?",
+            "desc": "An organised collection of structured data stored and accessed electronically. The foundation of every data system you will ever work with."
+          },
+          {
+            "name": "What is an RDBMS?",
+            "desc": "A Relational Database Management System — software that stores data in related tables. PostgreSQL, SQL Server, MySQL, SQLite are all RDBMS engines."
+          },
+          {
+            "name": "Primary Keys & Foreign Keys",
+            "desc": "A primary key uniquely identifies each row. A foreign key links one table to another. These relationships are what make relational databases powerful."
+          },
+          {
+            "name": "Normalization",
+            "desc": "The process of organising data to reduce redundancy. 1NF, 2NF, 3NF. Understanding normalisation helps you understand why data is structured the way it is."
+          },
+          {
+            "name": "Database schema design",
+            "desc": "The blueprint of your database — which tables exist, what columns they contain, and how they relate. Reading a schema is a core analyst skill."
+          }
+        ]
+      },
+      {
+        "title": "SQL Sublanguages",
+        "topics": [
+          {
+            "name": "DDL — Data Definition Language",
+            "desc": "CREATE, ALTER, DROP. Commands that define or modify the structure of database objects. Analysts read DDL; engineers write it."
+          },
+          {
+            "name": "DML — Data Manipulation Language",
+            "desc": "INSERT, UPDATE, DELETE. Commands that modify the data inside tables. Know these to understand how your data gets populated and changed."
+          },
+          {
+            "name": "DQL — Data Query Language",
+            "desc": "SELECT is the only command. This is where 90% of your analyst work lives. Master it completely before touching anything else."
+          },
+          {
+            "name": "TCL — Transaction Control Language",
+            "desc": "COMMIT, ROLLBACK, SAVEPOINT. Controls how changes are saved or reversed. Critical context for data integrity and understanding production systems."
+          },
+          {
+            "name": "DCL — Data Control Language",
+            "desc": "GRANT, REVOKE. Controls access to data. Relevant when you need permissions or are working in a governed data environment."
+          }
+        ]
+      },
+      {
+        "title": "Query Fundamentals",
+        "topics": [
+          {
+            "name": "SELECT",
+            "desc": "The entry point to every query. SELECT * is for exploration only — always specify columns in production queries."
+          },
+          {
+            "name": "WHERE",
+            "desc": "Filters rows based on conditions. The most important clause for controlling what data your query returns."
+          },
+          {
+            "name": "ORDER BY",
+            "desc": "Sorts your result set. ASC is default. Use DESC for rankings. Always pair with LIMIT when exploring large datasets."
+          },
+          {
+            "name": "GROUP BY",
+            "desc": "Collapses rows into groups for aggregation. Every column in SELECT that is not an aggregate function must appear in GROUP BY."
+          },
+          {
+            "name": "HAVING",
+            "desc": "Filters after aggregation, where WHERE filters before. HAVING is how you filter on a SUM or COUNT result."
+          },
+          {
+            "name": "DISTINCT",
+            "desc": "Returns only unique values. Use to check cardinality, deduplicate results, or explore what categories exist in a column."
+          }
+        ]
+      },
+      {
+        "title": "SQL Functions",
+        "topics": [
+          {
+            "name": "String functions",
+            "desc": "UPPER, LOWER, TRIM, REPLACE, SUBSTRING, CONCAT, LEN. Cleaning and manipulating text data inside SQL — avoids the need to export and clean in Excel."
+          },
+          {
+            "name": "Numeric functions",
+            "desc": "ROUND, CEILING, FLOOR, ABS, MOD. Formatting and transforming numbers directly in the query layer."
+          },
+          {
+            "name": "Date functions",
+            "desc": "DATEPART, DATEDIFF, DATEADD, FORMAT, GETDATE. Dates power most business analysis — cohort analysis, trend reporting, SLA tracking."
+          },
+          {
+            "name": "Conversion functions",
+            "desc": "CAST, CONVERT, TRY_CAST. Changing data types within a query. Essential when joining tables where the same value is stored in different types."
+          },
+          {
+            "name": "Aggregate functions",
+            "desc": "SUM, COUNT, AVG, MIN, MAX. The building blocks of every summary query. Know the difference between COUNT(*) and COUNT(column)."
+          }
+        ]
+      },
+      {
+        "title": "Conditional Logic & Joins",
+        "topics": [
+          {
+            "name": "CASE Statements",
+            "desc": "SQL's IF-THEN-ELSE. Creates new categorical columns, buckets numeric ranges, maps status codes to readable labels. Used in almost every real query."
+          },
+          {
+            "name": "INNER JOIN",
+            "desc": "Returns only rows with matching values in both tables. The default join. If you do not specify, this is what most engines assume."
+          },
+          {
+            "name": "LEFT JOIN",
+            "desc": "Returns all rows from the left table and matching rows from the right. Non-matches return NULL. The most common join in analytics work."
+          },
+          {
+            "name": "RIGHT JOIN",
+            "desc": "Returns all rows from the right table and matching rows from the left. Functionally equivalent to a LEFT JOIN with tables swapped — most analysts stick to LEFT."
+          },
+          {
+            "name": "FULL OUTER JOIN",
+            "desc": "Returns all rows from both tables, with NULLs where there is no match. Used to identify records that exist in one source but not the other."
+          },
+          {
+            "name": "SELF JOIN",
+            "desc": "Joining a table to itself. Used for hierarchical data, comparing rows within the same dataset, or finding pairs."
+          },
+          {
+            "name": "CROSS JOIN",
+            "desc": "Every row from the left table paired with every row from the right. Produces a Cartesian product. Use with caution — large tables explode in size."
+          }
+        ]
+      },
+      {
+        "title": "Advanced SQL",
+        "topics": [
+          {
+            "name": "Subqueries",
+            "desc": "A query nested inside another query. Used in SELECT, FROM, and WHERE clauses. Powerful but can become unreadable — use CTEs for complex logic."
+          },
+          {
+            "name": "Correlated Subqueries",
+            "desc": "A subquery that references the outer query. Executes once per row — slow on large datasets but necessary for certain row-level comparisons."
+          },
+          {
+            "name": "Scalar Subqueries",
+            "desc": "A subquery that returns exactly one value. Used like a column reference — you can SELECT it, filter on it, or use it in a CASE statement."
+          },
+          {
+            "name": "CTEs",
+            "desc": "Common Table Expressions. Named subqueries defined at the top of your query with WITH. They make complex queries readable, debuggable, and maintainable."
+          },
+          {
+            "name": "Recursive CTEs",
+            "desc": "A CTE that references itself. Used for hierarchical data — org charts, bill of materials, category trees. Advanced but extremely powerful."
+          }
+        ]
+      },
+      {
+        "title": "Window Functions",
+        "topics": [
+          {
+            "name": "ROW_NUMBER()",
+            "desc": "Assigns a unique sequential number to each row within a partition. Used for deduplication, pagination, and ranking without ties."
+          },
+          {
+            "name": "RANK() & DENSE_RANK()",
+            "desc": "RANK leaves gaps after ties. DENSE_RANK does not. Know which one your business logic requires before choosing."
+          },
+          {
+            "name": "NTILE()",
+            "desc": "Divides rows into N equal buckets. The foundation of percentile-based segmentation — RFM scoring, performance tiers, quartile analysis."
+          },
+          {
+            "name": "LAG() & LEAD()",
+            "desc": "Access the value from a previous or next row within a partition. Essential for period-over-period comparisons — MoM change, rolling deltas."
+          },
+          {
+            "name": "Running Totals",
+            "desc": "SUM() OVER (ORDER BY date) gives a cumulative sum. Ubiquitous in financial reporting, sales tracking, and progress monitoring."
+          },
+          {
+            "name": "Moving Averages",
+            "desc": "AVG() OVER (ROWS BETWEEN n PRECEDING AND CURRENT ROW). Smooths noisy time series data to surface underlying trends."
+          }
+        ]
+      },
+      {
+        "title": "Optimization & Objects",
+        "topics": [
+          {
+            "name": "Query execution basics",
+            "desc": "SQL does not execute in the order you write it. The engine optimises. Understanding execution order explains why certain queries are slow."
+          },
+          {
+            "name": "Indexes",
+            "desc": "Data structures that speed up retrieval on specific columns. Querying an indexed column is orders of magnitude faster than a full table scan."
+          },
+          {
+            "name": "Query optimization",
+            "desc": "Avoid SELECT *, filter early, avoid functions on indexed columns in WHERE clauses, use EXISTS over IN for large datasets."
+          },
+          {
+            "name": "Performance tuning",
+            "desc": "Reading execution plans, identifying table scans vs index seeks, measuring query cost. The difference between a query that runs in 2 seconds and 2 minutes."
+          },
+          {
+            "name": "Views",
+            "desc": "Saved SELECT queries that behave like virtual tables. Use views to standardise business logic, hide complexity, and control what analysts can see."
+          },
+          {
+            "name": "Stored Procedures (overview)",
+            "desc": "Pre-compiled SQL blocks stored in the database. Understand what they are and when engineers use them — you will encounter them in production systems."
+          },
+          {
+            "name": "Functions (overview)",
+            "desc": "Reusable SQL logic that accepts inputs and returns a value. Table-valued functions are particularly useful for parameterised reporting."
+          }
+        ]
+      },
+      {
+        "title": "AI in SQL",
+        "isAI": true,
+        "topics": [
+          {
+            "name": "Claude for SQL writing",
+            "desc": "Describe your question in plain English. Claude writes the query, explains each clause, and suggests edge cases you should handle."
+          },
+          {
+            "name": "ChatGPT for SQL debugging",
+            "desc": "Paste a broken query and the error message. AI diagnoses the issue, explains why it is happening, and rewrites the fix."
+          },
+          {
+            "name": "Query optimization using AI",
+            "desc": "Share a slow query with your schema context. AI identifies the bottleneck, suggests indexes, and rewrites for better execution."
+          },
+          {
+            "name": "Prompt patterns for SQL",
+            "desc": "How to give AI enough context to write accurate queries — schema, sample data, expected output, and dialect all matter."
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Corridex Delivery Intelligence",
+        "desc": "Investigate 15,000 shipments to diagnose a logistics SLA failure with EUR 4.2M contract at risk. Six analytical deliverables.",
+        "icon": "🗄️",
+        "tag": "SQL · Star Schema · Analytics",
+        "url": "https://github.com/Nte-Daniels/corridex-delivery-intelligence"
+      },
+      {
+        "title": "ShopSphere Data Warehouse",
+        "desc": "Build a full medallion architecture data warehouse on SQL Server with RFM segmentation across 22,000+ customers.",
+        "icon": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><circle cx=\"8\" cy=\"8\" r=\"4.5\" stroke=\"#0078D4\" stroke-width=\"1.5\"/><path d=\"M11.5 11.5L15 15\" stroke=\"#0078D4\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>",
+        "tag": "SQL · Medallion · RFM",
+        "url": "https://github.com/Nte-Daniels/ShopSphere-Data-Warehouse-and-Analysis-Project"
+      },
+      {
+        "title": "Operation Clearwater",
+        "desc": "Investigate 195K bank transactions for NorthAxis Bank, surfacing $267M in fraud exposure with a composite risk scoring model.",
+        "icon": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"3\" y=\"8\" width=\"12\" height=\"8\" rx=\"2\" stroke=\"#0078D4\" stroke-width=\"1.5\"/><path d=\"M6 8V6a3 3 0 016 0v2\" stroke=\"#0078D4\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><circle cx=\"9\" cy=\"12\" r=\"1.2\" fill=\"#0078D4\"/></svg>",
+        "tag": "SQL · Fraud Analytics · Risk",
+        "url": "https://github.com/Nte-Daniels/operation-clearwater"
+      }
+    ],
+    "hasDigDeep": true
+  },
+  {
+    "id": "stage5",
+    "number": "05",
+    "title": "Data Visualization Principles",
+    "subtitle": "Before you open Power BI, understand why humans see data the way they do.",
+    "time": "~1 week",
+    "weeks": 1,
+    "sections": [
+      {
+        "title": "Visual Communication",
+        "topics": [
+          {
+            "name": "Why visualization matters",
+            "desc": "The human brain processes visuals 60,000 times faster than text. A well-designed chart communicates in seconds what a table communicates in minutes."
+          },
+          {
+            "name": "Human perception and cognition",
+            "desc": "Pre-attentive attributes — colour, size, position, shape — are processed before conscious thought. Design with these and your audience sees the insight instantly."
+          },
+          {
+            "name": "Data storytelling principles",
+            "desc": "Every chart tells a story. Context, conflict, resolution. If your visualisation does not have a message, it is decoration."
+          }
+        ]
+      },
+      {
+        "title": "Chart Selection",
+        "topics": [
+          {
+            "name": "Bar charts",
+            "desc": "Comparisons across categories. Horizontal bars for long labels. Always start at zero. The most misused chart type — and the most reliable."
+          },
+          {
+            "name": "Line charts",
+            "desc": "Change over time. Requires a continuous time axis. Do not use lines for categorical comparisons — the implied continuity misleads."
+          },
+          {
+            "name": "Scatter plots",
+            "desc": "Relationships between two numeric variables. Shows correlation, clusters, and outliers simultaneously. Underused in business dashboards."
+          },
+          {
+            "name": "Histograms",
+            "desc": "Distribution of a single numeric variable. Not a bar chart — the bars are continuous and represent ranges, not categories."
+          },
+          {
+            "name": "Heatmaps",
+            "desc": "Colour-encoded matrix for showing patterns across two categorical dimensions. Powerful for time-of-day analysis, correlation matrices, and geographic data."
+          },
+          {
+            "name": "Waterfall charts",
+            "desc": "Shows cumulative effect of sequential positive and negative values. Standard for financial variance analysis — budget vs actual, revenue bridge."
+          },
+          {
+            "name": "Tree maps",
+            "desc": "Proportional rectangles for part-to-whole relationships. Effective for product mix, category share, and portfolio composition."
+          }
+        ]
+      },
+      {
+        "title": "Design Principles",
+        "topics": [
+          {
+            "name": "Color theory",
+            "desc": "Use colour to encode meaning, not decorate. Three colours maximum. Ensure accessibility for colour-blind users. Red means bad, green means good — but only if consistent."
+          },
+          {
+            "name": "Visual hierarchy",
+            "desc": "The most important number should be the biggest thing on the screen. Guide the viewer's eye from the headline to the detail, not the other way around."
+          },
+          {
+            "name": "White space",
+            "desc": "Empty space is not wasted space — it is breathing room that improves comprehension. Cluttered dashboards are not thorough, they are unusable."
+          },
+          {
+            "name": "Accessibility",
+            "desc": "Design for the 8% of men who are colour-blind. Use shape and label alongside colour. High contrast. Readable font sizes. Accessible design is better design for everyone."
+          },
+          {
+            "name": "Dashboard layouts",
+            "desc": "Top-left is where the eye lands first. Put the headline KPI there. Use a Z or F reading pattern. Group related visuals. Separate filters from content."
+          }
+        ]
+      },
+      {
+        "title": "Dashboard Psychology",
+        "topics": [
+          {
+            "name": "Cognitive load",
+            "desc": "Every element on a dashboard costs the viewer mental effort. Remove anything that does not contribute to the decision. Simplicity is respect for your audience's attention."
+          },
+          {
+            "name": "Information prioritization",
+            "desc": "Rank your insights by decision relevance. What does the person viewing this dashboard need to decide? Show that first, everything else second."
+          },
+          {
+            "name": "Executive reporting design",
+            "desc": "Executives want one insight per screen, not twenty metrics. Design for the three-second test — if the message is not clear in three seconds, redesign."
+          }
+        ]
+      },
+      {
+        "title": "Storytelling",
+        "topics": [
+          {
+            "name": "Finding the narrative",
+            "desc": "What is the one thing this data is trying to say? Start there. Build every chart around that message."
+          },
+          {
+            "name": "Building insight-driven visuals",
+            "desc": "An insight is not \"sales went up in Q3.\" An insight is \"sales went up 34% in Q3 driven by the West region, which offset a 12% decline in the East.\""
+          },
+          {
+            "name": "Guiding decision-making",
+            "desc": "The final test of any visualisation — did it lead to a decision? If not, it was a report, not an insight."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage6",
+    "number": "06",
+    "title": "Power BI",
+    "subtitle": "The most complete BI tool in the market. Learn it end to end — not just the visuals.",
+    "time": "~4 weeks",
+    "weeks": 4,
+    "sections": [
+      {
+        "title": "ETL with Power Query",
+        "topics": [
+          {
+            "name": "Connecting data sources",
+            "desc": "Excel, CSV, SQL Server, PostgreSQL, SharePoint, REST APIs, web pages. Power Query connects to almost everything and reloads automatically."
+          },
+          {
+            "name": "Data cleaning",
+            "desc": "Remove nulls, fix data types, trim whitespace, replace values — all recorded as applied steps that re-run on every refresh. Repeatable, auditable cleaning."
+          },
+          {
+            "name": "Transformations",
+            "desc": "Pivot, unpivot, group by, add conditional columns, extract date parts. Shape your data into the structure your model needs before it loads."
+          },
+          {
+            "name": "Merging queries",
+            "desc": "Join two queries on a common key — equivalent to a SQL JOIN. All join types available. The foundation of multi-source data models."
+          },
+          {
+            "name": "Appending queries",
+            "desc": "Stack multiple tables vertically. Combine January, February, and March files into one unified fact table automatically."
+          }
+        ]
+      },
+      {
+        "title": "Data Modeling",
+        "topics": [
+          {
+            "name": "Relationships & Cardinality",
+            "desc": "One-to-many, many-to-one, many-to-many. The direction of your relationship determines how filters flow across your model. Get this wrong and your DAX will lie."
+          },
+          {
+            "name": "Star schema",
+            "desc": "One fact table surrounded by dimension tables. The optimal structure for Power BI. Faster queries, simpler DAX, cleaner model."
+          },
+          {
+            "name": "Snowflake schema",
+            "desc": "Normalised dimensions — dimension tables with their own dimension tables. More complex than star schema. Understand it to know why star is usually better."
+          },
+          {
+            "name": "Fact tables",
+            "desc": "Store measurable events — sales transactions, support tickets, page views. Typically long and narrow. Every row is one event."
+          },
+          {
+            "name": "Dimension tables",
+            "desc": "Store descriptive context — customers, products, dates, regions. Typically wide and short. Every row describes one entity."
+          },
+          {
+            "name": "Normalization in Power BI",
+            "desc": "Split wide flat tables into proper fact and dimension tables before loading. Your model performance and DAX complexity both depend on this."
+          }
+        ]
+      },
+      {
+        "title": "DAX Fundamentals",
+        "topics": [
+          {
+            "name": "Calculated columns",
+            "desc": "A new column computed row by row at model refresh time. Stored in memory. Use for categorisation and segmentation logic."
+          },
+          {
+            "name": "Measures",
+            "desc": "Calculations evaluated at query time depending on filter context. This is where DAX lives. All your KPIs should be measures, never calculated columns."
+          },
+          {
+            "name": "Basic DAX functions",
+            "desc": "SUM, AVERAGE, COUNT, COUNTROWS, DISTINCTCOUNT, MIN, MAX, DIVIDE. These are the building blocks of 80% of business metrics."
+          }
+        ]
+      },
+      {
+        "title": "Advanced DAX",
+        "topics": [
+          {
+            "name": "CALCULATE",
+            "desc": "The most powerful function in DAX. Evaluates an expression in a modified filter context. Every advanced DAX pattern uses CALCULATE."
+          },
+          {
+            "name": "FILTER",
+            "desc": "Returns a filtered table. Used inside CALCULATE to apply complex conditions that cannot be expressed as simple column filters."
+          },
+          {
+            "name": "ALL & ALLEXCEPT",
+            "desc": "ALL removes all filters from a table or column. ALLEXCEPT removes all filters except the ones you specify. Foundation of % of total calculations."
+          },
+          {
+            "name": "RELATED & USERELATIONSHIP",
+            "desc": "RELATED follows a relationship to retrieve a column value from a related table. USERELATIONSHIP activates an inactive relationship for a specific measure."
+          },
+          {
+            "name": "Variables in DAX",
+            "desc": "VAR and RETURN. Define intermediate calculations once, reference them multiple times. Makes complex DAX readable and eliminates repeated evaluation."
+          },
+          {
+            "name": "Iterators (SUMX, AVERAGEX)",
+            "desc": "Functions that iterate row by row over a table before aggregating. SUMX(Sales, Sales[Qty] * Sales[Price]) is a classic example. Essential for row-level calculations."
+          },
+          {
+            "name": "Time Intelligence",
+            "desc": "TOTALYTD, SAMEPERIODLASTYEAR, DATEADD, PARALLELPERIOD. Requires a proper date table. The foundation of every financial and sales report."
+          }
+        ]
+      },
+      {
+        "title": "Visualization & Design",
+        "topics": [
+          {
+            "name": "KPI Cards",
+            "desc": "Single-metric callouts at the top of every dashboard. The first thing an executive looks at. Design them to communicate direction, not just value."
+          },
+          {
+            "name": "Tables & Matrix",
+            "desc": "Tabular views for detailed breakdown. Matrix supports row and column hierarchies with subtotals. Essential for financial reports."
+          },
+          {
+            "name": "Charts & Maps",
+            "desc": "Bar, line, scatter, treemap, funnel, map visuals. Choose based on the relationship you are communicating, not what looks impressive."
+          },
+          {
+            "name": "Drillthroughs",
+            "desc": "Right-click a data point to navigate to a detail page filtered to that context. Adds investigation capability without cluttering your summary page."
+          },
+          {
+            "name": "Tooltips",
+            "desc": "Custom tooltip pages that appear on hover. Show a sparkline, a mini table, or additional context without adding elements to your main canvas."
+          },
+          {
+            "name": "Bookmarks",
+            "desc": "Saved states of your report page — filter selections, visible visuals, page positions. Used to build navigation buttons and storytelling flows."
+          },
+          {
+            "name": "Executive, Analytical & Operational dashboards",
+            "desc": "Three distinct design targets. Executives want headlines. Analysts want depth. Operations wants real-time status. The same data, three different designs."
+          }
+        ]
+      },
+      {
+        "title": "Power BI Service",
+        "topics": [
+          {
+            "name": "Publishing reports",
+            "desc": "Publish from Desktop to the Service. The report is live — changes in Desktop require republishing. Understand the Desktop vs Service distinction."
+          },
+          {
+            "name": "Workspaces & Apps",
+            "desc": "Workspaces are development environments. Apps are packaged collections of reports published to end users. Separate the two in your workflow."
+          },
+          {
+            "name": "Scheduled refresh",
+            "desc": "Configure your dataset to refresh automatically on a schedule. Requires a gateway for on-premises sources. The difference between a live dashboard and a static one."
+          },
+          {
+            "name": "Sharing reports",
+            "desc": "Share links, embed in Teams, publish to web. Each method has different access control implications. Know who can see what before you share anything."
+          }
+        ]
+      },
+      {
+        "title": "Governance & Admin",
+        "topics": [
+          {
+            "name": "Row Level Security (RLS)",
+            "desc": "Filter data by user identity. A sales manager sees only their region. Build RLS into your model, not as an afterthought after deployment."
+          },
+          {
+            "name": "Access Control",
+            "desc": "Workspace roles — Admin, Member, Contributor, Viewer. Assign the minimum access required. Principle of least privilege applies to BI too."
+          },
+          {
+            "name": "Data Lineage",
+            "desc": "Visualise the flow from data source through dataflows to datasets to reports. Critical for impact analysis before changing an upstream dataset."
+          },
+          {
+            "name": "Endorsement",
+            "desc": "Certified or Promoted tags that signal to users which datasets are the trusted, official source of truth. Prevents shadow datasets from proliferating."
+          }
+        ]
+      },
+      {
+        "title": "AI in Power BI",
+        "isAI": true,
+        "topics": [
+          {
+            "name": "Copilot in Power BI",
+            "desc": "Generate report pages, write DAX measures, and summarise insights from natural language prompts. Available in Premium workspaces."
+          },
+          {
+            "name": "Q&A Visual",
+            "desc": "Users type questions in plain English and Power BI generates the answer as a visual. Train the Q&A engine with synonyms for your business terminology."
+          },
+          {
+            "name": "Claude for DAX writing",
+            "desc": "Share your model schema and describe the measure you need. Claude writes production-ready DAX with variable naming, comments, and edge case handling."
+          },
+          {
+            "name": "ChatGPT for debugging",
+            "desc": "Paste a broken DAX measure and the error. AI diagnoses the filter context issue, explains what went wrong, and rewrites the fix."
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Operation Clearwater — Power BI",
+        "desc": "Fraud detection and risk intelligence dashboard for NorthAxis Bank. Composite risk scoring, watchlist, and board-ready executive summary.",
+        "icon": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><rect x=\"2\" y=\"2\" width=\"14\" height=\"14\" rx=\"2.5\" fill=\"#C9A227\" fill-opacity=\"0.1\" stroke=\"#C9A227\" stroke-width=\"1.4\"/><rect x=\"5\" y=\"11\" width=\"2.5\" height=\"4\" rx=\"1\" fill=\"#C9A227\"/><rect x=\"8.5\" y=\"8\" width=\"2.5\" height=\"7\" rx=\"1\" fill=\"#C9A227\" opacity=\".75\"/><rect x=\"12\" y=\"5\" width=\"2.5\" height=\"10\" rx=\"1\" fill=\"#C9A227\" opacity=\".5\"/></svg>",
+        "tag": "Power BI · Fraud · Risk",
+        "url": "https://github.com/datawithdany/Operation-ClearWater-Power-BI"
+      },
+      {
+        "title": "AthleteX Care Dashboard",
+        "desc": "Sports injury analytics dashboard tracking injury trends, treatment costs, and recovery outcomes across clubs, events, and regions.",
+        "icon": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\"><circle cx=\"9\" cy=\"9\" r=\"7\" stroke=\"#C9A227\" stroke-width=\"1.5\"/><circle cx=\"9\" cy=\"9\" r=\"4\" stroke=\"#C9A227\" stroke-width=\"1.5\" opacity=\".6\"/><circle cx=\"9\" cy=\"9\" r=\"1.5\" fill=\"#C9A227\"/></svg>",
+        "tag": "Power BI · Healthcare · DAX",
+        "url": "https://github.com/datawithdany/AthleteX-Injury-Tracking-Dashboard"
+      }
+    ],
+    "hasDigDeep": true
+  },
+  {
+    "id": "stage7",
+    "number": "07",
+    "title": "Business Communication & Stakeholder Management",
+    "subtitle": "The hardest skill to teach. The most important one to have.",
+    "time": "~2 weeks",
+    "weeks": 2,
+    "sections": [
+      {
+        "title": "Requirement Gathering",
+        "topics": [
+          {
+            "name": "Discovery sessions",
+            "desc": "Structured conversations to understand what a stakeholder actually needs — often different from what they initially ask for. Listen more than you speak."
+          },
+          {
+            "name": "Stakeholder interviews",
+            "desc": "One-on-one conversations to surface requirements, pain points, and decision-making context. The quality of your questions determines the quality of your analysis."
+          },
+          {
+            "name": "Workshop facilitation",
+            "desc": "Group sessions to align multiple stakeholders on requirements, priorities, and definitions. Conflict surfaces here — that is the point."
+          },
+          {
+            "name": "Requirements elicitation",
+            "desc": "The formal process of drawing out unstated, implicit, and conflicting requirements. Most stakeholders do not know exactly what they need until they see what they do not want."
+          }
+        ]
+      },
+      {
+        "title": "Business Analysis",
+        "topics": [
+          {
+            "name": "Functional requirements",
+            "desc": "What the system or analysis must do. Specific, measurable, testable. \"Show monthly revenue by region\" is functional. \"Make a good dashboard\" is not."
+          },
+          {
+            "name": "Non-functional requirements",
+            "desc": "How the system must perform — refresh frequency, load time, accessibility, user volume. Ignored at the start, complained about at the end."
+          },
+          {
+            "name": "KPI definition",
+            "desc": "Documenting exactly how each metric is calculated, what data source it comes from, and who owns it. Prevents the \"your number is different from my number\" problem."
+          },
+          {
+            "name": "Success criteria",
+            "desc": "How will you and the stakeholder agree that this project succeeded? Define it before you start. Reference it at delivery."
+          }
+        ]
+      },
+      {
+        "title": "Documentation",
+        "topics": [
+          {
+            "name": "BRD — Business Requirements Document",
+            "desc": "Captures the business need, scope, and high-level requirements. Written before any technical work begins. The contract between you and the stakeholder."
+          },
+          {
+            "name": "FRD — Functional Requirements Document",
+            "desc": "Translates business requirements into specific, technical functional specifications. The bridge between business intent and technical delivery."
+          },
+          {
+            "name": "User stories",
+            "desc": "As a [user], I want [capability] so that [benefit]. Keeps requirements grounded in who uses the output and why it matters to them."
+          },
+          {
+            "name": "Data dictionaries",
+            "desc": "A catalogue of every field in your dataset — name, data type, description, source, and business definition. Non-negotiable for shared datasets."
+          },
+          {
+            "name": "KPI documentation",
+            "desc": "A formal record of every metric — formula, data source, refresh cadence, owner, and known limitations. Prevents confusion when the same metric returns different values from different tools."
+          }
+        ]
+      },
+      {
+        "title": "Stakeholder Management",
+        "topics": [
+          {
+            "name": "Managing expectations",
+            "desc": "Scope creep starts when expectations are not set. Be explicit about what is included, what is excluded, and what the timeline is. In writing."
+          },
+          {
+            "name": "Handling conflicting requirements",
+            "desc": "Different stakeholders want different things. Your job is not to pick a side — it is to facilitate alignment. Document the conflict and escalate if necessary."
+          },
+          {
+            "name": "Prioritization",
+            "desc": "Not everything can be done first. Use a structured framework — impact vs effort, must have vs nice to have. Get stakeholders to rank, not just list."
+          },
+          {
+            "name": "Scope management",
+            "desc": "Every addition to scope is a subtraction from something else. Make the trade-off visible every time a new request comes in."
+          }
+        ]
+      },
+      {
+        "title": "Professional Communication",
+        "topics": [
+          {
+            "name": "Email writing",
+            "desc": "Lead with the ask or the answer, not the context. Busy stakeholders read the first two lines and decide whether to continue. Write accordingly."
+          },
+          {
+            "name": "Meeting facilitation",
+            "desc": "Every meeting needs an agenda, an owner, and a decision or action output. If a meeting can be an email, it should be."
+          },
+          {
+            "name": "Presentation skills",
+            "desc": "Structure before slides. What is the one thing you need this audience to believe or do when you are done? Build backward from that."
+          },
+          {
+            "name": "Executive communication",
+            "desc": "Executives communicate in headlines and implications. Lead with the finding, then the evidence, then the recommendation. Never lead with methodology."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage8",
+    "number": "08",
+    "title": "PowerPoint for Data",
+    "subtitle": "Your analysis is only as valuable as your ability to communicate it.",
+    "time": "~1 week",
+    "weeks": 1,
+    "sections": [
+      {
+        "title": "Data Storytelling",
+        "topics": [
+          {
+            "name": "Structuring data stories",
+            "desc": "Situation, complication, resolution. Every data presentation follows this arc. Context first, then the problem, then what the data says to do."
+          },
+          {
+            "name": "The narrative arc",
+            "desc": "Data without a story is a spreadsheet. Identify the tension in your findings — what is happening that should not be, or what is not happening that should — and build from there."
+          },
+          {
+            "name": "Building compelling insights",
+            "desc": "An insight answers \"so what?\" — not just what the number is, but what it means for the business and what should happen next."
+          }
+        ]
+      },
+      {
+        "title": "Slide Design",
+        "topics": [
+          {
+            "name": "Layout principles",
+            "desc": "One message per slide. If you have two things to say, you have two slides. Density is the enemy of comprehension."
+          },
+          {
+            "name": "Visual hierarchy",
+            "desc": "The headline should be the insight, not a label. \"West region declining 18% MoM\" is a headline. \"Regional Performance\" is a label. These are not the same."
+          },
+          {
+            "name": "Typography",
+            "desc": "Two fonts maximum. One for headlines, one for body. Size signals importance. Bold for emphasis. Never use more than three text sizes on one slide."
+          },
+          {
+            "name": "Color consistency",
+            "desc": "Pick a palette and use it everywhere. One accent color for highlights. Consistent use of red for negative, green for positive, grey for context."
+          }
+        ]
+      },
+      {
+        "title": "Executive Presentations",
+        "topics": [
+          {
+            "name": "Board-level reporting",
+            "desc": "Three slides maximum for the core message — situation, finding, recommendation. Everything else is backup. Boards make decisions, not analysis."
+          },
+          {
+            "name": "Leadership presentations",
+            "desc": "Open with the conclusion. Executives do not have time to wait for the build-up. State the finding, then prove it."
+          },
+          {
+            "name": "Decision-focused storytelling",
+            "desc": "Every slide should point toward a decision. If a slide does not contribute to the conclusion, cut it. Ruthlessly."
+          }
+        ]
+      },
+      {
+        "title": "Chart Selection & Delivery",
+        "topics": [
+          {
+            "name": "Choosing the right visual",
+            "desc": "Match the chart to the relationship. Comparison needs a bar chart, not a pie. Trend needs a line, not a bar. Get this wrong and the audience draws the wrong conclusion."
+          },
+          {
+            "name": "Simplifying complex information",
+            "desc": "If your chart needs a legend longer than three items, redesign it. If it needs more than 10 seconds to interpret, it has too much information."
+          },
+          {
+            "name": "Presenting to executives",
+            "desc": "Pause after the headline. Let it land. Do not rush to explain before they have processed it. Silence in a presentation is not dead air — it is impact."
+          },
+          {
+            "name": "Presenting to non-technical stakeholders",
+            "desc": "Avoid jargon. Use analogies. Translate every statistical finding into a business implication. \"A p-value of 0.03\" means nothing — \"this is very unlikely to be random\" means something."
+          },
+          {
+            "name": "Handling questions confidently",
+            "desc": "Know your data well enough to answer follow-up questions. Anticipate the three most likely challenges. \"I do not know, I will find out\" is always better than a wrong answer."
+          }
+        ]
+      },
+      {
+        "title": "Before & After Transformations",
+        "topics": [
+          {
+            "name": "Converting cluttered slides",
+            "desc": "Remove every element that does not serve the message — gridlines, legends that repeat what is labeled, decorative images, text boxes that explain the obvious."
+          },
+          {
+            "name": "Executive-ready presentations",
+            "desc": "One insight per slide. Insight headline at the top. Supporting visual below. Recommendation at the bottom. Consistent format. Nothing extra."
+          }
+        ]
+      }
+    ],
+    "powerpointNote": true
+  },
+  {
+    "id": "stage9",
+    "number": "09",
+    "title": "Python for Analytics",
+    "subtitle": "Automation, depth, and scale. Everything Excel cannot do at volume.",
+    "time": "~4 weeks",
+    "weeks": 4,
+    "sections": [
+      {
+        "title": "Environment Setup",
+        "topics": [
+          {
+            "name": "VS Code",
+            "desc": "The industry-standard code editor. Lightweight, extensible, supports Jupyter notebooks natively. Install the Python and Pylance extensions before anything else."
+          },
+          {
+            "name": "Jupyter Notebook",
+            "desc": "Interactive coding environment where code and output live together. The standard for data analysis and EDA. Each cell is independently executable."
+          },
+          {
+            "name": "Anaconda",
+            "desc": "A distribution that comes pre-loaded with Python and 250+ data science libraries. Removes the setup friction for beginners. Includes conda for environment management."
+          },
+          {
+            "name": "Virtual Environments",
+            "desc": "Isolated Python environments for each project. Prevents dependency conflicts between projects. Always create a virtual environment before installing libraries."
+          }
+        ]
+      },
+      {
+        "title": "Python Fundamentals",
+        "topics": [
+          {
+            "name": "Variables & Data Types",
+            "desc": "Integers, floats, strings, booleans, lists, dictionaries, tuples. How you store data in Python determines what you can do with it."
+          },
+          {
+            "name": "Loops",
+            "desc": "for loops and while loops. Automate repetitive tasks. Iterate over rows, files, or API responses. The foundation of automation thinking."
+          },
+          {
+            "name": "Functions",
+            "desc": "Reusable blocks of code. Define once, call everywhere. Functions are what separate scripts from professional code."
+          },
+          {
+            "name": "Conditional Statements",
+            "desc": "if, elif, else. Control the flow of your code based on conditions. The same logic as CASE in SQL and IF in Excel — but far more powerful."
+          }
+        ]
+      },
+      {
+        "title": "Pandas",
+        "topics": [
+          {
+            "name": "Loading data",
+            "desc": "pd.read_csv(), pd.read_excel(), pd.read_sql(). Read data from virtually any source into a DataFrame in one line."
+          },
+          {
+            "name": "Exploring data",
+            "desc": "df.head(), df.info(), df.describe(), df.value_counts(). Profile your dataset before touching it. Know its shape, types, and distribution."
+          },
+          {
+            "name": "Cleaning data",
+            "desc": "Handle nulls, fix data types, remove duplicates, standardise formats. Pandas is faster and more auditable than Excel for large datasets."
+          },
+          {
+            "name": "Transforming data",
+            "desc": "Apply functions to columns, create new columns, reshape DataFrames with pivot and melt. ETL logic without a pipeline tool."
+          },
+          {
+            "name": "Aggregations",
+            "desc": "groupby(), agg(), pivot_table(). The Pandas equivalent of GROUP BY and Pivot Tables. The building block of every summary analysis."
+          }
+        ]
+      },
+      {
+        "title": "NumPy",
+        "topics": [
+          {
+            "name": "Arrays",
+            "desc": "NumPy's core data structure. Faster and more memory-efficient than Python lists for numerical operations. The foundation that Pandas is built on."
+          },
+          {
+            "name": "Mathematical operations",
+            "desc": "Vectorised operations that run on entire arrays without loops. np.sum(), np.mean(), np.std() — faster than iterating row by row."
+          },
+          {
+            "name": "Statistical analysis",
+            "desc": "np.percentile(), np.corrcoef(), np.random. The building blocks for statistical computation that Pandas delegates to NumPy under the hood."
+          }
+        ]
+      },
+      {
+        "title": "Data Visualization",
+        "topics": [
+          {
+            "name": "Matplotlib",
+            "desc": "The foundational Python visualization library. Verbose but fully controllable. Understanding Matplotlib makes every other library easier — they are all built on it."
+          },
+          {
+            "name": "Seaborn",
+            "desc": "Statistical visualization built on Matplotlib. Beautiful defaults, built-in support for distributions, correlations, and categorical plots with minimal code."
+          },
+          {
+            "name": "Exploratory visualizations",
+            "desc": "Quick charts during EDA — histograms, scatter plots, boxplots, correlation heatmaps. The goal is to understand the data, not impress anyone."
+          },
+          {
+            "name": "Business visualizations",
+            "desc": "Polished charts for reports and presentations. Consistent colour scheme, labeled axes, informative titles, annotations that highlight the key insight."
+          }
+        ]
+      },
+      {
+        "title": "EDA & Automation",
+        "topics": [
+          {
+            "name": "Profiling datasets",
+            "desc": "Systematic exploration — shape, dtypes, null counts, unique value counts, distributions, correlations. Never skip this step on a new dataset."
+          },
+          {
+            "name": "Identifying patterns",
+            "desc": "Segment comparisons, time series decomposition, outlier detection, correlation analysis. EDA is where hypotheses are formed, not confirmed."
+          },
+          {
+            "name": "Feature exploration",
+            "desc": "Understanding each column — its range, distribution, relationship to other columns, and potential as an analytical dimension."
+          },
+          {
+            "name": "Reading & writing files",
+            "desc": "pd.read_csv(), df.to_excel(), open(), json.dump(). Automating file I/O is what makes Python useful for operational workflows."
+          },
+          {
+            "name": "Scheduled reporting",
+            "desc": "Combine Python scripts with task schedulers (cron, Windows Task Scheduler) to run reports automatically and email the output."
+          },
+          {
+            "name": "Workflow automation",
+            "desc": "Python replaces manual, repetitive analyst work — downloading files, transforming data, generating reports, sending updates. Automate the routine, focus on the insight."
+          }
+        ]
+      },
+      {
+        "title": "AI in Python",
+        "isAI": true,
+        "topics": [
+          {
+            "name": "Claude for code generation",
+            "desc": "Describe what you want your script to do. Claude writes the full function, handles edge cases, and explains each part. Accelerates development dramatically."
+          },
+          {
+            "name": "ChatGPT for debugging",
+            "desc": "Paste the error traceback and the relevant code block. AI identifies the root cause and rewrites the fix — often catching multiple issues in one pass."
+          },
+          {
+            "name": "Automation with AI",
+            "desc": "Use AI to generate boilerplate automation code — file processing pipelines, email sending scripts, data validation routines — that you then customise."
+          },
+          {
+            "name": "Prompt patterns for Python",
+            "desc": "The context you give AI determines the quality of the code you get. Schema, sample data, expected output, and constraint all belong in the prompt."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage10",
+    "number": "10",
+    "title": "Analytics Domains",
+    "subtitle": "The tools are the same. The questions are different. Pick a lane.",
+    "time": "~2 weeks",
+    "weeks": 2,
+    "sections": [
+      {
+        "title": "Domain Specializations",
+        "topics": [
+          {
+            "name": "Sales Analytics",
+            "desc": "Pipeline analysis, revenue tracking, conversion rates, sales rep performance, forecast vs actual. The most common analytics use case in commercial businesses."
+          },
+          {
+            "name": "Marketing Analytics",
+            "desc": "Campaign performance, attribution modelling, CAC by channel, funnel analysis, A/B testing. Connects marketing spend to measurable business outcomes."
+          },
+          {
+            "name": "Product Analytics",
+            "desc": "User behavior, feature adoption, retention curves, funnel analysis, DAU/MAU. Most common in tech companies and SaaS products."
+          },
+          {
+            "name": "Finance Analytics",
+            "desc": "Budget vs actual, variance analysis, forecasting, P&L reporting, cash flow modelling. High-stakes, zero-tolerance for errors."
+          },
+          {
+            "name": "Operations Analytics",
+            "desc": "SLA adherence, productivity metrics, process bottlenecks, supply chain performance, logistics tracking. The domain where milliseconds and percentages have direct cost implications."
+          },
+          {
+            "name": "HR Analytics",
+            "desc": "Employee retention, recruitment funnel efficiency, headcount planning, performance distribution, compensation benchmarking. Growing fast as companies become data-driven about their people."
+          }
+        ]
+      },
+      {
+        "title": "Niche Down",
+        "topics": [
+          {
+            "name": "Pick one domain to go deep on",
+            "desc": "A generalist analyst competes with everyone. A finance analytics specialist competes with far fewer people — and commands higher rates. Choose early."
+          },
+          {
+            "name": "Build domain-specific projects",
+            "desc": "Two projects in sales analytics signal specialisation. One project in each domain signals someone who has not committed. Depth wins."
+          },
+          {
+            "name": "Create domain-specific content",
+            "desc": "Write about the problems, metrics, and data structures of your chosen domain. Content establishes you as a domain expert faster than any certification."
+          },
+          {
+            "name": "Become the go-to person in your niche",
+            "desc": "When someone in your network has a finance analytics problem, you want your name to be the first one they think of. That requires visible, consistent specialisation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage11",
+    "number": "11",
+    "title": "AI Integration",
+    "subtitle": "AI does not replace the analyst. It eliminates the analyst who refuses to use it.",
+    "time": "~2 weeks",
+    "weeks": 2,
+    "sections": [
+      {
+        "title": "AI Foundations",
+        "topics": [
+          {
+            "name": "How LLMs work",
+            "desc": "Large Language Models predict the next token based on context. They do not reason — they pattern-match at extraordinary scale. Understanding this shapes how you use them."
+          },
+          {
+            "name": "AI limitations",
+            "desc": "Hallucination, context window limits, inability to access real-time data, sensitivity to prompt wording. Know the failure modes before depending on the output."
+          },
+          {
+            "name": "Responsible AI use",
+            "desc": "Do not share confidential data with AI tools. Verify every output before using it in production. AI is a draft generator — you are the editor."
+          }
+        ]
+      },
+      {
+        "title": "Prompt Engineering",
+        "topics": [
+          {
+            "name": "Structured prompting",
+            "desc": "Role + context + task + format + constraints. A structured prompt returns a usable output. A vague prompt returns a generic one."
+          },
+          {
+            "name": "Chain-of-thought prompting",
+            "desc": "Ask the model to think step by step before answering. Dramatically improves accuracy on complex analytical and logical tasks."
+          },
+          {
+            "name": "Context engineering",
+            "desc": "The quality of your prompt context determines the quality of the output. Schema, sample data, business definitions, and constraints belong in every analytical prompt."
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered Analytics",
+        "topics": [
+          {
+            "name": "Data cleaning with AI",
+            "desc": "Paste a sample of messy data and ask for a cleaning strategy. AI identifies patterns you might miss and suggests transformation logic."
+          },
+          {
+            "name": "Data analysis with AI",
+            "desc": "Share aggregated results and ask for interpretation, anomaly detection, and hypotheses. AI as a first-pass analyst — you validate and deepen."
+          },
+          {
+            "name": "Dashboard generation",
+            "desc": "Describe your dataset and business question. AI suggests the right visuals, layout, and KPIs before you open Power BI."
+          },
+          {
+            "name": "Insight generation",
+            "desc": "Share your findings and ask AI to help you articulate the business implication and recommended action. Speeds up the \"so what?\" step dramatically."
+          }
+        ]
+      },
+      {
+        "title": "AI Tools for Analysts",
+        "topics": [
+          {
+            "name": "Claude",
+            "desc": "Best for long-context analytical work — reading documentation, writing complex SQL, building structured prompts, and working with code files. Anthropic."
+          },
+          {
+            "name": "ChatGPT",
+            "desc": "Broad general-purpose capability. Strong for code generation, debugging, and drafting communications. GPT-4 and above for analytical work. OpenAI."
+          },
+          {
+            "name": "Microsoft Copilot",
+            "desc": "Native integration across Excel, PowerPoint, Teams, and Power BI. The most frictionless AI for analysts already in the Microsoft ecosystem."
+          },
+          {
+            "name": "NotebookLM",
+            "desc": "Google's tool for analysing and querying documents and research. Upload reports, transcripts, and data dictionaries and ask questions directly."
+          },
+          {
+            "name": "Perplexity",
+            "desc": "AI-powered search with cited sources. Faster than Google for researching unfamiliar domains, benchmarks, and industry metrics."
+          }
+        ]
+      },
+      {
+        "title": "Modern Analyst Stack",
+        "topics": [
+          {
+            "name": "AI-assisted workflows",
+            "desc": "Map every repetitive step in your current workflow and identify which ones AI can accelerate. Start there. Compound over time."
+          },
+          {
+            "name": "Automated reporting",
+            "desc": "Python + AI + scheduled refresh — reports that write, format, and distribute themselves. The analyst's time shifts from production to interpretation."
+          },
+          {
+            "name": "Human + AI collaboration",
+            "desc": "AI handles first drafts, exploration, and documentation. You handle judgment, context, stakeholder communication, and accountability for conclusions."
+          },
+          {
+            "name": "AI-first analytics workflows",
+            "desc": "Start every project by asking AI what questions you should be asking, what data you need, and what the standard analytical approach is. Then go deeper."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stage12",
+    "number": "12",
+    "title": "Career Development",
+    "subtitle": "Skills get you in the room. Positioning gets you the offer.",
+    "time": "~2 weeks",
+    "weeks": 2,
+    "sections": [
+      {
+        "title": "Portfolio Building",
+        "topics": [
+          {
+            "name": "GitHub — document every project",
+            "desc": "Every project you build belongs on GitHub with a proper README — problem statement, approach, findings, tools used. Recruiters check this."
+          },
+          {
+            "name": "Power BI Portfolio",
+            "desc": "Publish your dashboards to Power BI Service and share the link. Screenshots are not enough — let them interact with the work."
+          },
+          {
+            "name": "Project documentation & case studies",
+            "desc": "Write up every project as a case study — the business problem, your analytical approach, the findings, and the recommendation. This is what separates you from candidates with only code."
+          },
+          {
+            "name": "Building in public on LinkedIn & X",
+            "desc": "Post every project. Share what you learned. Document the process, not just the output. Visibility compounds. The analyst who posts is more hireable than the equally skilled one who does not."
+          }
+        ]
+      },
+      {
+        "title": "Resume & LinkedIn",
+        "topics": [
+          {
+            "name": "ATS optimization",
+            "desc": "Most resumes are screened by software before a human sees them. Use exact keywords from the job description. SQL, Power BI, Python — spell them as they appear in job postings."
+          },
+          {
+            "name": "Analytics resume structure",
+            "desc": "Name, title, summary, skills, experience, projects, education. Lead with the impact of each role — percentages, scale, outcomes — not a list of responsibilities."
+          },
+          {
+            "name": "Project presentation",
+            "desc": "Each project on your resume should have a one-line summary, the tools used, and one measurable outcome. If you cannot quantify the impact, you are not describing the project correctly."
+          },
+          {
+            "name": "LinkedIn personal branding",
+            "desc": "Headline, About section, featured section, and consistent posting. Your LinkedIn is a living portfolio — treat it that way."
+          },
+          {
+            "name": "Content creation for visibility",
+            "desc": "Post SQL concepts, dashboard teardowns, project walkthroughs. The people who post become the people who get opportunities. It is that direct."
+          },
+          {
+            "name": "Networking strategy",
+            "desc": "Comment on posts in your domain. Connect with people whose work you admire and say something specific. DM with context, not just \"I want to connect.\""
+          }
+        ]
+      },
+      {
+        "title": "Interview Preparation",
+        "topics": [
+          {
+            "name": "SQL interviews",
+            "desc": "Window functions, GROUP BY vs HAVING, JOIN types, query optimisation. Practice on LeetCode and StrataScratch. Write the query, then explain your thought process."
+          },
+          {
+            "name": "Statistics interviews",
+            "desc": "Explain the difference between correlation and causation, when to use median vs mean, what a p-value means in business terms. Conceptual clarity matters more than formulas."
+          },
+          {
+            "name": "Power BI interviews",
+            "desc": "CALCULATE, filter context, relationship directions, RLS implementation. Be able to walk through a data model design and explain every decision."
+          },
+          {
+            "name": "Business case interviews",
+            "desc": "Given a metric that dropped 20%, how do you investigate? Frame your approach before touching data. Hypothesis first, analysis second. This is what senior roles test."
+          }
+        ]
+      },
+      {
+        "title": "Freelancing & Growth",
+        "topics": [
+          {
+            "name": "Fiverr & Upwork",
+            "desc": "Start with small, well-scoped projects. One strong review compounds. Specialize your profile — \"Power BI dashboards for e-commerce\" beats \"data analyst.\""
+          },
+          {
+            "name": "Consulting fundamentals",
+            "desc": "Scope clearly. Price for value, not time. Deliver on or before the deadline. Communication is more important than the work — most clients will not know if your DAX is elegant, but they will notice if you go quiet."
+          },
+          {
+            "name": "Junior Analyst → Analyst",
+            "desc": "Own your deliverables end to end. Ask fewer clarifying questions. Proactively surface findings before being asked. Initiative is the signal for promotion readiness."
+          },
+          {
+            "name": "Analyst → Senior Analyst",
+            "desc": "Your output starts influencing strategy, not just reporting on it. You define the metrics, not just calculate them. You manage stakeholder relationships independently."
+          },
+          {
+            "name": "Senior Analyst → Analytics Lead",
+            "desc": "You are building the system, not working in it. Defining the data infrastructure, the reporting standards, the team's analytical approach. Technical depth plus business leadership."
+          }
+        ]
+      }
+    ]
+  }
+]

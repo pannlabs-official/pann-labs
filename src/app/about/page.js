@@ -7,7 +7,7 @@ import styles from './about.module.css';
 
 export const metadata = {
   title: 'About',
-  description: 'Learn about Peter Akpan Jr. — the data professional behind Pann Labs. Multi-domain expertise in oil & gas, retail, and general analytics with a commitment to data integrity and AI innovation.',
+  description: 'Peter Akpan is a data analyst based in Uyo, Nigeria. Working at Start Innovation Hub, building Pann Labs, and sharing real analytics work with the community.',
 };
 
 const expertiseAreas = [
@@ -35,31 +35,39 @@ export default function AboutPage() {
       <section className={styles.hero}>
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroText}>
-            <span className={styles.label}>About Pann Labs</span>
+            <span className={styles.label}>About Me</span>
             <h1>The Person Behind the Data</h1>
             <p className={styles.heroSubtitle}>
-              I&apos;m Peter Akpan Jr. — a data professional who believes every dataset deserves
-              rigorous attention, every decision deserves documentation, and every insight deserves
-              to be made accessible. I founded Pann Labs to bring data integrity and AI innovation
-              to organizations worldwide.
+              I&apos;m Peter Akpan — a data analyst who got into this field because I kept asking
+              &quot;why&quot; and nobody had a good answer. Today I analyse data at Start Innovation Hub,
+              mentor other analysts, and build Pann Labs in public. Every project I ship is
+              documented, shared, and designed to be useful to someone else.
             </p>
             <div className={styles.heroMeta}>
               <span className={styles.metaItem}>
-                <MapPin size={16} /> Lagos, Nigeria
+                <MapPin size={16} /> Uyo, Akwa Ibom, Nigeria
               </span>
               <span className={styles.metaItem}>
-                <Globe size={16} /> Available Globally (Remote)
+                <Globe size={16} /> Open to Remote Work
               </span>
             </div>
           </div>
           <div className={styles.heroImage}>
-            <Image
-              src="/images/about-hero.png"
-              alt="Data analytics workspace"
-              width={500}
-              height={400}
-              className={styles.aboutImg}
-            />
+            <div className={styles.portraitWrapper}>
+              <Image
+                src="/images/peter_portrait.png"
+                alt="Peter Akpan — Data Analyst"
+                width={420}
+                height={588}
+                className={styles.portrait}
+                priority
+              />
+              <div className={styles.portraitGlow} />
+              <div className={styles.portraitBadge}>
+                <span className={styles.portraitBadgeDot} />
+                Open to roles
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -70,7 +78,7 @@ export default function AboutPage() {
           <SectionHeading
             label="Philosophy"
             title="What Drives My Work"
-            subtitle="Three principles that guide every project, every analysis, every line of documentation"
+            subtitle="Three principles behind every project, every analysis, every decision log"
           />
 
           <div className={styles.philosophyGrid}>
@@ -129,7 +137,7 @@ export default function AboutPage() {
           <SectionHeading
             label="Journey"
             title="Career Timeline"
-            subtitle="The path that led to Pann Labs"
+            subtitle="From asking why to building tools that answer it"
           />
 
           <div className={styles.timeline}>
@@ -182,13 +190,14 @@ export default function AboutPage() {
       {/* CTA */}
       <section className={styles.ctaSection}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h2 className={styles.ctaTitle}>Let&apos;s Work Together</h2>
+          <h2 className={styles.ctaTitle}>Hire Me or Collaborate</h2>
           <p className={styles.ctaSub}>
-            Whether you&apos;re looking to hire, need consulting, or want to collaborate on something meaningful—I&apos;d love to hear from you.
+            Open to data analyst roles, freelance projects, and collaboration with people building something real.
+            If you have a data problem worth solving, let&apos;s talk.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button href="/contact" variant="secondary" size="lg">Get in Touch</Button>
-            <Button href="/portfolio" variant="outlineWhite" size="lg">View My Work</Button>
+            <Button href="/portfolio" variant="outlineWhite" size="lg">See the Work</Button>
           </div>
         </div>
       </section>

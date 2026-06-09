@@ -2,131 +2,102 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
-  font-family: var(--font-primary);
-  font-weight: var(--font-semibold);
-  text-decoration: none;
-  border: none;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.01em;
+  border-radius: var(--r-full);
+  border: 1px solid transparent;
   cursor: pointer;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-base);
+  text-decoration: none;
+  transition: all var(--t-base);
   white-space: nowrap;
-  line-height: 1;
   position: relative;
   overflow: hidden;
-  z-index: 1;
-}
-
-.button::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity var(--transition-base);
-}
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  transition: transform var(--transition-fast);
-}
-
-.button:hover .icon {
-  transform: translateX(2px);
 }
 
 /* Sizes */
-.sm {
-  padding: 0.5rem 1.25rem;
-  font-size: var(--text-sm);
-}
-
-.md {
-  padding: 0.85rem 2rem;
-  font-size: var(--text-base);
-}
-
-.lg {
-  padding: 1.1rem 2.5rem;
-  font-size: var(--text-lg);
-}
+.sm  { font-size: var(--text-sm);  padding: 0.4rem 1rem; }
+.md  { font-size: var(--text-sm);  padding: 0.6rem 1.4rem; }
+.lg  { font-size: var(--text-base); padding: 0.75rem 1.75rem; }
 
 /* Variants */
 .primary {
-  background: var(--color-accent-gold);
-  color: #000;
-  border: 1px solid var(--color-accent-gold);
-  box-shadow: 0 0 10px rgba(184, 134, 11, 0.1);
-}
-
-.primary::after {
-  background: var(--color-accent-gold);
-}
-
-.primary:hover {
-  transform: translateY(-2px);
+  background: var(--gradient-gold);
   color: #000;
   border-color: transparent;
-  box-shadow: 0 0 20px rgba(184, 134, 11, 0.4);
+  box-shadow: 0 2px 12px var(--color-gold-glow);
+}
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--color-gold-glow-lg);
+  color: #000;
 }
 
 .secondary {
-  background: transparent;
-  color: var(--color-accent-gold);
-  border: 1px solid var(--color-accent-gold);
+  background: var(--color-gold-glow);
+  color: var(--color-gold-light);
+  border-color: var(--color-border);
 }
-
-.secondary::after {
-  background: var(--color-accent-gold);
-}
-
 .secondary:hover {
-  transform: translateY(-2px);
-  color: #000;
-  box-shadow: 0 0 20px rgba(230, 200, 117, 0.3);
-}
-
-.secondary:hover::after {
-  opacity: 1;
-}
-
-.outline {
-  background: transparent;
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-}
-
-.outline:hover {
-  border-color: var(--color-text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(201,151,58,0.25);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
   transform: translateY(-2px);
 }
 
 .outlineWhite {
   background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+.outlineWhite:hover {
+  background: rgba(255,255,255,0.05);
   color: var(--color-text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
 }
 
-.outlineWhite:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
+.outlineGold {
+  background: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-border);
+}
+.outlineGold:hover {
+  background: var(--color-gold-glow);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
   transform: translateY(-2px);
+}
+
+.outline {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-subtle);
+}
+.outline:hover {
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
 }
 
 .ghost {
   background: transparent;
   color: var(--color-text-secondary);
-  padding-left: 0;
-  padding-right: 0;
+  border-color: transparent;
 }
-
 .ghost:hover {
-  color: var(--color-accent-gold);
+  background: rgba(255,255,255,0.04);
+  color: var(--color-text-primary);
 }
 
-/* Full Width */
-.fullWidth {
-  width: 100%;
+.fullWidth { width: 100%; }
+
+.icon {
+  display: flex;
+  align-items: center;
+  transition: transform var(--t-fast);
+}
+
+.button:hover .icon {
+  transform: translateX(3px);
 }

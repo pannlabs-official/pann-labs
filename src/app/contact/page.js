@@ -137,21 +137,21 @@ export default function ContactPage() {
                   <div className={styles.contactIcon}><Mail size={18} /></div>
                   <div>
                     <span className={styles.contactLabel}>Email</span>
-                    <a href="mailto:hello@pannlabs.com">hello@pannlabs.com</a>
+                    <a href="mailto:petrepann.tech@gmail.com">petrepann.tech@gmail.com</a>
                   </div>
                 </li>
                 <li>
                   <div className={styles.contactIcon}><LinkedinIcon size={18} /></div>
                   <div>
                     <span className={styles.contactLabel}>LinkedIn</span>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Peter Akpan Jr.</a>
+                    <a href="https://linkedin.com/in/petre-pann-profile" target="_blank" rel="noopener noreferrer">Peter Akpan</a>
                   </div>
                 </li>
                 <li>
                   <div className={styles.contactIcon}><GithubIcon size={18} /></div>
                   <div>
                     <span className={styles.contactLabel}>GitHub</span>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">@petre-pannlabs</a>
+                    <a href="https://github.com/pannlabs-official" target="_blank" rel="noopener noreferrer">@pannlabs-official</a>
                   </div>
                 </li>
               </ul>
@@ -162,7 +162,7 @@ export default function ContactPage() {
               <div className={styles.locationInfo}>
                 <div className={styles.locationItem}>
                   <MapPin size={18} />
-                  <span>Lagos, Nigeria</span>
+                  <span>Uyo, Akwa Ibom, Nigeria</span>
                 </div>
                 <div className={styles.locationItem}>
                   <Globe size={18} />
