@@ -2,95 +2,35 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
   font-family: var(--font-sans);
-  font-weight: var(--fw-semibold);
+  font-weight: 500;
   letter-spacing: -0.01em;
-  border-radius: var(--r-full);
-  border: 1px solid transparent;
+  border-radius: 0; /* Sharp corners like Cura */
+  border: 1px solid var(--color-border-subtle);
   cursor: pointer;
   text-decoration: none;
   transition: all var(--t-base);
   white-space: nowrap;
   position: relative;
-  overflow: hidden;
-}
-
-/* Sizes */
-.sm  { font-size: var(--text-sm);  padding: 0.4rem 1rem; }
-.md  { font-size: var(--text-sm);  padding: 0.6rem 1.4rem; }
-.lg  { font-size: var(--text-base); padding: 0.75rem 1.75rem; }
-
-/* Variants */
-.primary {
-  background: var(--gradient-gold);
-  color: #000;
-  border-color: transparent;
-  box-shadow: 0 2px 12px var(--color-gold-glow);
-}
-.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--color-gold-glow-lg);
-  color: #000;
-}
-
-.secondary {
-  background: var(--color-gold-glow);
-  color: var(--color-gold-light);
-  border-color: var(--color-border);
-}
-.secondary:hover {
-  background: rgba(201,151,58,0.25);
-  border-color: var(--color-gold);
-  color: var(--color-gold-light);
-  transform: translateY(-2px);
-}
-
-.outlineWhite {
   background: transparent;
-  color: var(--color-text-secondary);
-  border-color: var(--color-border);
-}
-.outlineWhite:hover {
-  background: rgba(255,255,255,0.05);
   color: var(--color-text-primary);
-  border-color: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
+  overflow: visible; /* Let corners overflow */
 }
 
-.outlineGold {
-  background: transparent;
-  color: var(--color-gold);
-  border-color: var(--color-border);
-}
-.outlineGold:hover {
-  background: var(--color-gold-glow);
-  border-color: var(--color-gold);
-  color: var(--color-gold-light);
-  transform: translateY(-2px);
-}
-
-.outline {
-  background: transparent;
-  color: var(--color-text-secondary);
-  border-color: var(--color-border-subtle);
-}
-.outline:hover {
-  border-color: var(--color-border);
-  color: var(--color-text-primary);
-}
-
-.ghost {
-  background: transparent;
-  color: var(--color-text-secondary);
-  border-color: transparent;
-}
-.ghost:hover {
-  background: rgba(255,255,255,0.04);
-  color: var(--color-text-primary);
-}
+/* Base sizing */
+.sm  { font-size: var(--text-xs);  padding: 0.45rem 1.1rem; }
+.md  { font-size: var(--text-sm);  padding: 0.65rem 1.5rem; }
+.lg  { font-size: var(--text-base); padding: 0.8rem 1.9rem; }
 
 .fullWidth { width: 100%; }
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  position: relative;
+}
 
 .icon {
   display: flex;
@@ -99,5 +39,118 @@
 }
 
 .button:hover .icon {
-  transform: translateX(3px);
+  transform: translateX(3.5px);
+}
+
+/* ── Four Corner Guides ── */
+.button::before,
+.button::after,
+.cornerTR,
+.cornerBL {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--color-sienna);
+  opacity: 0;
+  transition: all var(--t-base);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Top-Left */
+.button::before {
+  top: -4px;
+  left: -4px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-Right */
+.button::after {
+  bottom: -4px;
+  right: -4px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Top-Right */
+.cornerTR {
+  top: -4px;
+  right: -4px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Bottom-Left */
+.cornerBL {
+  bottom: -4px;
+  left: -4px;
+  border-right: none;
+  border-top: none;
+}
+
+/* Hover brackets snap in */
+.button:hover::before { top: -1.5px; left: -1.5px; opacity: 1; }
+.button:hover::after { bottom: -1.5px; right: -1.5px; opacity: 1; }
+.button:hover .cornerTR { top: -1.5px; right: -1.5px; opacity: 1; }
+.button:hover .cornerBL { bottom: -1.5px; left: -1.5px; opacity: 1; }
+
+/* ── Variants ── */
+
+/* Primary: Cura orange solid, text dark. On hover, outline + snaps */
+.primary {
+  background: var(--color-sienna);
+  color: var(--color-bg-main);
+  border-color: var(--color-sienna);
+}
+.primary:hover {
+  background: transparent;
+  color: var(--color-sienna);
+}
+
+/* Secondary: Transparent, orange border. On hover, slight fill + snaps */
+.secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+.secondary:hover {
+  background: rgba(231, 73, 24, 0.08);
+  border-color: var(--color-sienna);
+}
+
+/* OutlineWhite: White outline. On hover, fills solid white/cream */
+.outlineWhite {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.outlineWhite:hover {
+  background: var(--color-cream);
+  color: var(--color-bg-main);
+  border-color: var(--color-cream);
+}
+
+/* OutlineGold: Muted tan/orange outline. On hover, fills orange */
+.outlineGold {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+.outlineGold:hover {
+  background: var(--color-sienna);
+  color: var(--color-bg-main);
+  border-color: var(--color-sienna);
+}
+
+/* Ghost */
+.ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-primary);
 }

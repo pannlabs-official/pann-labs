@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import styles from './Navbar.module.css';
+import GridLines from '@/components/GridLines';
+import Button from '@/components/Button';
 
 const navLinks = [
   { href: '/portfolio', label: 'Work' },
@@ -50,6 +52,7 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+      <GridLines />
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           <div className={styles.logoIcon}>P</div>
@@ -73,13 +76,14 @@ export default function Navbar() {
           <button className={styles.themeToggle} onClick={toggleTheme} aria-label="Toggle theme">
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          <Link
+          <Button
             href="/contact"
-            className={styles.navCta}
+            variant="primary"
+            size="sm"
             onClick={() => setIsOpen(false)}
           >
-            Start a project &rarr;
-          </Link>
+            Start a project
+          </Button>
         </div>
 
         <button
@@ -95,3 +99,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Footer.module.css';
+import GridLines from '@/components/GridLines';
 
 const LinkedinIcon = ({ size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -18,7 +19,9 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <GridLines />
       <div className={styles.container}>
+
         <div className={styles.grid}>
 
           {/* Brand */}

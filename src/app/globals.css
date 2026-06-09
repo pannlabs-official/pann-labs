@@ -5,64 +5,64 @@
    ============================================= */
 
 /* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ── Backgrounds (warm dark derivations) ── */
-  --color-bg-main:      #0F0A05;
-  --color-bg-secondary: #17100A;
-  --color-bg-tertiary:  #1E160E;
-  --color-bg-elevated:  #281B0F;
+  /* ── Backgrounds (Cura warm charcoal black derivations) ── */
+  --color-bg-main:      #15130f;
+  --color-bg-secondary: #221b19;
+  --color-bg-tertiary:  #2c2421;
+  --color-bg-elevated:  #352b27;
 
-  /* ── Brand Palette ── */
-  --color-sienna:       #A0522D;   /* primary accent  */
-  --color-saddle:       #8B4513;   /* deep accent     */
-  --color-tan:          #D2B48C;   /* light accent    */
-  --color-cream:        #F5F5DC;   /* near-white text */
-  --color-brown-dim:    #6B3318;   /* muted accent    */
+  /* ── Brand Palette (Cura Climate Palette) ── */
+  --color-sienna:       #e74918;   /* vibrant accent orange */
+  --color-saddle:       #e77149;   /* lighter accent orange */
+  --color-tan:          #b7a798;   /* earthy sand/tan */
+  --color-cream:        #fbfcf7;   /* warm cream white text */
+  --color-brown-dim:    #7a402d;   /* terracotta dim orange */
 
-  /* ── Accent aliases (replaces gold system) ── */
+  /* ── Accent aliases ── */
   --color-gold:          var(--color-sienna);
-  --color-gold-light:    var(--color-tan);
+  --color-gold-light:    var(--color-saddle);
   --color-gold-dim:      var(--color-brown-dim);
-  --color-gold-glow:     rgba(160, 82, 45, 0.18);
-  --color-gold-glow-lg:  rgba(160, 82, 45, 0.36);
+  --color-gold-glow:     rgba(231, 73, 24, 0.12);
+  --color-gold-glow-lg:  rgba(231, 73, 24, 0.24);
 
   /* ── Text ── */
-  --color-text-primary:   #F0EDE6;   /* warm off-white   */
-  --color-text-secondary: #BBA98A;   /* sandy warm gray  */
-  --color-text-muted:     #7A6248;   /* brown muted      */
-  --color-text-inverse:   #0F0A05;
+  --color-text-primary:   #fbfcf7;   /* cream off-white */
+  --color-text-secondary: #b7a798;   /* sand secondary */
+  --color-text-muted:     #758696;   /* muted slate */
+  --color-text-inverse:   #15130f;
 
   /* ── Borders ── */
-  --color-border:         rgba(160, 82, 45, 0.2);
-  --color-border-subtle:  rgba(255, 255, 255, 0.055);
-  --color-border-glow:    rgba(210, 180, 140, 0.45);
+  --color-border:         rgba(231, 73, 24, 0.22);
+  --color-border-subtle:  rgba(255, 255, 255, 0.05);
+  --color-border-glow:    rgba(231, 113, 73, 0.45);
 
   /* ── Glass ── */
-  --color-glass:          rgba(15, 10, 5, 0.72);
-  --color-glass-hover:    rgba(24, 16, 8, 0.88);
+  --color-glass:          rgba(21, 19, 15, 0.75);
+  --color-glass-hover:    rgba(34, 27, 25, 0.9);
 
   /* ── Status ── */
-  --color-success: #4CAF7D;
-  --color-error:   #E07070;
-  --color-warning: #D2A653;
-  --color-info:    #7EAFD4;
+  --color-success: #cef5ca;
+  --color-error:   #f8e4e4;
+  --color-warning: #fcf8d8;
+  --color-info:    #d9e5ff;
 
   /* ── Gradients ── */
-  --gradient-bg:       linear-gradient(160deg, #0F0A05 0%, #17100A 50%, #0F0A05 100%);
-  --gradient-gold:     linear-gradient(135deg, #8B4513 0%, #D2B48C 60%, #A0522D 100%);
-  --gradient-gold-dim: linear-gradient(135deg, #6B3318 0%, #A0522D 100%);
-  --gradient-glow:     radial-gradient(ellipse at center, rgba(160,82,45,0.14) 0%, transparent 70%);
-  --gradient-card:     linear-gradient(145deg, rgba(30,22,14,0.85) 0%, rgba(23,16,10,0.7) 100%);
-  --gradient-hero:     radial-gradient(ellipse at 60% 40%, rgba(139,69,19,0.1) 0%, transparent 60%);
-  --gradient-shimmer:  linear-gradient(90deg, #8B4513, #D2B48C, #A0522D, #D2B48C, #8B4513);
+  --gradient-bg:       linear-gradient(160deg, #15130f 0%, #221b19 50%, #15130f 100%);
+  --gradient-gold:     linear-gradient(135deg, #7a402d 0%, #e77149 60%, #e74918 100%);
+  --gradient-gold-dim: linear-gradient(135deg, #7a402d 0%, #e74918 100%);
+  --gradient-glow:     radial-gradient(ellipse at center, rgba(231,73,24,0.12) 0%, transparent 70%);
+  --gradient-card:     linear-gradient(145deg, rgba(34,27,25,0.85) 0%, rgba(21,19,15,0.7) 100%);
+  --gradient-hero:     radial-gradient(ellipse at 60% 40%, rgba(231,73,24,0.08) 0%, transparent 60%);
+  --gradient-shimmer:  linear-gradient(90deg, #7a402d, #e77149, #e74918, #e77149, #7a402d);
 
   /* ── Typography ── */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-head: 'Outfit', 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-head: 'Geist', 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   --font-serif: 'Instrument Serif', serif;
   --font-mono-ibm: 'IBM Plex Mono', monospace;
 
@@ -408,6 +408,27 @@ input, textarea, select { font-family: var(--font-sans); }
 .text-muted  { color: var(--color-text-muted); }
 .text-mono   { font-family: var(--font-mono); }
 
+/* ── Grid Lines Overlay ── */
+.line-wrapper {
+  opacity: 0.065;
+  pointer-events: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.vertical-line {
+  background-color: rgba(255, 255, 255, 0.45);
+  width: 1px;
+  height: 100%;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .container, .container-narrow { padding: 0 var(--sp-6); }
@@ -417,4 +438,14 @@ input, textarea, select { font-family: var(--font-sans); }
   :root { --navbar-h: 64px; }
   .container, .container-narrow { padding: 0 var(--sp-4); }
   .section, .section-alt { padding: clamp(3rem, 8vw, 5rem) 0; }
+  .line-wrapper {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .vertical-line:nth-child(2),
+  .vertical-line:nth-child(3) {
+    display: none;
+  }
 }
+
+

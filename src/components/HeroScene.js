@@ -30,7 +30,7 @@ function DataParticles({ count = 1800 }) {
     <Points ref={ref} positions={positions} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
-        color="#A0522D"
+        color="#e74918"
         size={0.022}
         sizeAttenuation
         depthWrite={false}
@@ -73,7 +73,7 @@ function GridRings() {
         return (
           <line key={i} geometry={geometry}>
             <lineBasicMaterial
-              color="#8B4513"
+              color="#e77149"
               transparent
               opacity={0.1 + i * 0.04}
             />
@@ -100,11 +100,11 @@ function CoreSphere() {
     <mesh ref={meshRef}>
       <icosahedronGeometry args={[0.55, 1]} />
       <meshStandardMaterial
-        color="#A0522D"
+        color="#e74918"
         wireframe
         transparent
         opacity={0.22}
-        emissive="#8B4513"
+        emissive="#7a402d"
         emissiveIntensity={0.5}
       />
     </mesh>
@@ -120,11 +120,12 @@ export default function HeroScene() {
       style={{ background: 'transparent' }}
     >
       <ambientLight intensity={0.3} />
-      <pointLight position={[3, 3, 3]} intensity={1.4} color="#D2B48C" />
-      <pointLight position={[-3, -2, -3]} intensity={0.5} color="#8B4513" />
+      <pointLight position={[3, 3, 3]} intensity={1.4} color="#b7a798" />
+      <pointLight position={[-3, -2, -3]} intensity={0.5} color="#7a402d" />
       <DataParticles />
       <GridRings />
       <CoreSphere />
     </Canvas>
   );
 }
+

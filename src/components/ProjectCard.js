@@ -1,12 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import styles from './ProjectCard.module.css';
 
 export default function ProjectCard({ project, index = 0 }) {
-  const num = (index + 1).toString().padStart(2, '0');
-  
   return (
     <Link href={`/portfolio/${project.slug}`} className={styles.cardLink}>
       <motion.div 
@@ -16,22 +14,30 @@ export default function ProjectCard({ project, index = 0 }) {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }}
       >
-        <div className={styles.indexCol}>{num}</div>
+        <div className={styles.imageWrapper}>
+          {project.thumbnail && (
+            <Image 
+              src={project.thumbnail} 
+              alt={project.title} 
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className={styles.image}
+              priority={index < 3}
+            />
+          )}
+        </div>
         
-        <div className={styles.titleCol}>
-          <span className={styles.domain}>{project.domain || 'CASE STUDY'}</span>
+        <div className={styles.content}>
+          <div className={styles.badgeWrapper}>
+            <span className={styles.badge}>{project.domain || 'CASE STUDY'}</span>
+          </div>
+          
           <h3 className={styles.title}>{project.title}</h3>
-        </div>
-
-        <div className={styles.descCol}>
           <p className={styles.brief}>{project.brief}</p>
-        </div>
-
-        <div className={styles.tagsCol}>
-          <div className={styles.tools}>
-            {project.tools.slice(0, 3).map((tool) => (
-              <span key={tool} className={styles.tool}>{tool}</span>
-            ))}
+          
+          <div className={styles.cta}>
+            <span>Read Case Study</span>
+            <ArrowRight size={15} className={styles.arrow} />
           </div>
         </div>
       </motion.div>

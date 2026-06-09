@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Briefcase, Users, ExternalLink } from 'lucide-react';
 import Button from '@/components/Button';
 import ProjectCard from '@/components/ProjectCard';
+import GridLines from '@/components/GridLines';
 import { projects } from '@/data/projects';
 import styles from './page.module.css';
 
@@ -57,6 +58,7 @@ export default function HomePage() {
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className={styles.hero}>
+        <GridLines />
         {/* 3D canvas background */}
         <div className={styles.canvasHost}>
           <HeroScene />
@@ -116,6 +118,7 @@ export default function HomePage() {
 
       {/* ── WHAT I DO ──────────────────────────────────────── */}
       <section className={`section ${styles.whatSection}`}>
+        <GridLines />
         <div className="container">
           <motion.div
             className={styles.sectionLabel}
@@ -155,6 +158,7 @@ export default function HomePage() {
 
       {/* ── FEATURED PROJECTS ─────────────────────────────── */}
       <section className="section-alt">
+        <GridLines />
         <div className="container">
           <div className={styles.sectionHeader}>
             <div>
@@ -184,6 +188,7 @@ export default function HomePage() {
 
       {/* ── CURRENTLY BUILDING ────────────────────────────── */}
       <section className="section">
+        <GridLines />
         <div className="container">
           <motion.div
             className={styles.buildingCard}
@@ -233,6 +238,7 @@ export default function HomePage() {
 
       {/* ── LATEST FROM BLOG ──────────────────────────────── */}
       <section className="section-alt">
+        <GridLines />
         <div className="container">
           <div className={styles.sectionHeader}>
             <div>
@@ -274,6 +280,7 @@ export default function HomePage() {
 
       {/* ── CTA ───────────────────────────────────────────── */}
       <section className={styles.ctaSection}>
+        <GridLines />
         <motion.div
           className={`container ${styles.ctaInner}`}
           initial={{ opacity: 0, y: 24 }}

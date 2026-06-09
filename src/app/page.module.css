@@ -172,7 +172,7 @@
 .whatCard {
   background: var(--gradient-card);
   border: 1px solid var(--color-border-subtle);
-  border-radius: var(--r-xl);
+  border-radius: 0;
   padding: var(--sp-8);
   transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
   position: relative;
@@ -204,7 +204,7 @@
   height: 44px;
   background: var(--color-gold-glow);
   border: 1px solid var(--color-border);
-  border-radius: var(--r-lg);
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +269,7 @@
   gap: var(--sp-16);
   background: var(--gradient-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--r-2xl);
+  border-radius: 0;
   padding: var(--sp-16);
   position: relative;
   overflow: hidden;
@@ -335,7 +335,7 @@
   align-items: center;
   gap: var(--sp-3);
   padding: var(--sp-3) var(--sp-4);
-  border-radius: var(--r-md);
+  border-radius: 0;
   font-size: var(--text-sm);
   border: 1px solid var(--color-border-subtle);
   background: rgba(255,255,255,0.02);
@@ -380,7 +380,7 @@
   padding: var(--sp-8);
   background: var(--gradient-card);
   border: 1px solid var(--color-border-subtle);
-  border-radius: var(--r-xl);
+  border-radius: 0;
   text-decoration: none;
   transition: transform var(--t-base), border-color var(--t-base), box-shadow var(--t-base);
 }
